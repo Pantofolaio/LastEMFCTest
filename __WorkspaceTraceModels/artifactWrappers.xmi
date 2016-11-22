@@ -6,4 +6,6 @@
   <artifacts uri="/LastEMFCtestProject/design/WordFormSample.doc" name="WordFormSample.doc" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
   <artifacts uri="/org.itea2.amalthea.example.erika.hvac.ysct/src-gen/component/ModeCoordinator.c" name="ModeCoordinator.c" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
   <artifacts uri="/__WorkspaceTraceModels/traceModel.xmi" name="traceModel.xmi" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
+  <artifacts uri="/org.itea2.amalthea.example.hvac/HVAC_Interfaces.fidl" name="HVAC_Interfaces.fidl" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
+  <artifacts uri="/org.itea2.amalthea.example.hvac/HVAC.amxmi" name="HVAC.amxmi" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
 </GenericArtifactMetaModel:ArtifactWrapperContainer>

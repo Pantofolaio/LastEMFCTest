@@ -25,5 +25,6 @@
   </traces>
   <traces name=" [L/org.itea2.amalthea.example.hvac/HVAC_Interfaces.fidl, L/org.itea2.amalthea.example.hvac/HVAC.amxmi]">
     <item href="../LastEMFCtestProject/design/model.uml#_9lV6IKzUEea8q5_VYn-f9w"/>
+    <item href="../org.itea2.amalthea.example.hvac/01_Requirements/HVAC_Requirements.reqif#//@toolExtensions.0/@extensions.0/@specViewConfigurations.0/@columns.0"/>
   </traces>
 </GenericTraceMetaModel:GenericTraceModel>

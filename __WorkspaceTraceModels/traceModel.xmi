@@ -5,8 +5,8 @@
     xmlns:GenericTraceMetaModel="org.eclipse.capra.GenericTraceMetaModel">
   <traces name="TEGA SPREMINJAMO">
     <item href="../LastEMFCtestProject/design/model.uml#_7uY_kKzUEea8q5_VYn-f9w"/>
-    <item href="../LastEMFCtestProject/design/model.uml#_9lV6IKzUEea8q5_VYn-f9w"/>
     <item href="../LastEMFCtestProject/design/model.uml#_GNcT4LCwEeatiqEKVhwaXQ"/>
+    <item href="../LastEMFCtestProject/design/model.uml#_N-lU8LCwEeatiqEKVhwaXQ"/>
   </traces>
   <traces name=" [L/LastEMFCtestProject/design/WordFormSample.doc, org.eclipse.uml2.uml.internal.impl.ModelImpl@12436267 (name: RootElement, visibility: &lt;unset>) (URI: null) (viewpoint: &lt;unset>)]">
     <item href="artifactWrappers.xmi#//@artifacts.3"/>

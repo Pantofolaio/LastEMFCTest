@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <GenericArtifactMetaModel:ArtifactWrapperContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:GenericArtifactMetaModel="org.eclipse.capra.GenericArtifactMetaModel">
   <artifacts uri="=LastEMFCtestProject/src&lt;to.je.to{tojetoclass.java[tojetoclass" name="tojetoclassAAAAA" ArtifactHandler="org.eclipse.capra.handler.jdt.JavaElementHandler"/>
-  <artifacts uri="=LastEMFCtestProject/src&lt;to.je.to{tojetoclass.java" name="tojetoclass.java" ArtifactHandler="org.eclipse.capra.handler.jdt.JavaElementHandler"/>
+  <artifacts uri="=LastEMFCtestProject/src&lt;to.je.to{tojetoclass.java" name="matisinor.java" ArtifactHandler="org.eclipse.capra.handler.jdt.JavaElementHandler"/>
   <artifacts uri="/LastEMFCtestProject/WordFormSample.doc" name="WordFormSample.doc" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
   <artifacts uri="/LastEMFCtestProject/design/WordFormSample.doc" name="WordFormSample.doc" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
   <artifacts uri="/org.itea2.amalthea.example.erika.hvac.ysct/src-gen/component/ModeCoordinator.c" name="ModeCoordinator.c" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
-  <artifacts uri="/org.itea2.amalthea.example.hvac/HVAC_Interfaces.fidl" name="HVAC_Interfaces.fidl" ArtifactHandler="org.eclipse.capra.handler.file.IFileHandler"/>
 </GenericArtifactMetaModel:ArtifactWrapperContainer>

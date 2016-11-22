@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<GenericTraceMetaModel:GenericTraceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:GenericTraceMetaModel="org.eclipse.capra.GenericTraceMetaModel">
+  <traces name=" [class tojetoclass [in [Working copy] tojetoclass.java [in to.je.to [in src [in LastEMFCtestProject]]]], [Working copy] tojetoclass.java [in to.je.to [in src [in LastEMFCtestProject]]]&#xA;  package to.je.to&#xA;  class tojetoclass]">
+    <item href="artifactWrappers.xmi#//@artifacts.0"/>
+    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+  </traces>
+</GenericTraceMetaModel:GenericTraceModel>

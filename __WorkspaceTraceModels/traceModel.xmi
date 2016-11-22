@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<GenericTraceMetaModel:GenericTraceModel
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:GenericTraceMetaModel="org.eclipse.capra.GenericTraceMetaModel">
+<GenericTraceMetaModel:GenericTraceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:GenericTraceMetaModel="org.eclipse.capra.GenericTraceMetaModel">
   <traces name=" [class tojetoclass [in [Working copy] tojetoclass.java [in to.je.to [in src [in LastEMFCtestProject]]]], [Working copy] tojetoclass.java [in to.je.to [in src [in LastEMFCtestProject]]]&#xA;  package to.je.to&#xA;  class tojetoclass]">
     <item href="artifactWrappers.xmi#//@artifacts.0"/>
     <item href="artifactWrappers.xmi#//@artifacts.1"/>
@@ -26,5 +23,6 @@
   <traces name=" [L/org.itea2.amalthea.example.hvac/HVAC_Interfaces.fidl, L/org.itea2.amalthea.example.hvac/HVAC.amxmi]">
     <item href="../LastEMFCtestProject/design/model.uml#_9lV6IKzUEea8q5_VYn-f9w"/>
     <item href="../org.itea2.amalthea.example.hvac/01_Requirements/HVAC_Requirements.reqif#//@toolExtensions.0/@extensions.0/@specViewConfigurations.0/@columns.0"/>
+    <item href="../LastEMFCtestProject/design/model.uml#_7uY_kKzUEea8q5_VYn-f9w"/>
   </traces>
 </GenericTraceMetaModel:GenericTraceModel>

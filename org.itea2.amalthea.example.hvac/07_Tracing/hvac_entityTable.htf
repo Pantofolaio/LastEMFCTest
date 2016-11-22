@@ -1,0 +1,87 @@
+#TypeTable
+#-00 Task
+#-01 ISR
+#-02 Runnable
+#-03 CodeBlock
+#-04 Signal
+#-05 Semaphore
+
+#TaskEventTable
+#-00 activate
+#-01 start
+#-02 resume 
+#-03 preempt
+#-04 terminate
+#-05 wait
+#-06 release
+#-07 poll
+#-08 run_polling
+#-09 park
+#-0A poll_parking
+#-0B release_parking
+
+#ISREventTable
+#-00 start
+#-01 resume 
+#-02 preempt
+#-03 terminate
+
+#RunnableEventTable
+#-00 start
+#-01 suspend
+#-02 resume
+#-03 terminate
+
+#CodeBlockEventTable
+#-00 start
+#-01 stop
+
+#SignalEventTable
+#-00 read
+#-01 write
+
+#SemaphoreEventTable
+#-00 lock
+#-01 unlock
+
+#EntityTable
+#-0001 TRACEID_TASK_CP0
+#-0002 TRACEID_TASK_CP1
+#-0003 TRACEID_TASK_PP0
+#-0004 TRACEID_TASK_PP1
+#-0005 TRACEID_TASK_PP2
+#-0010 TRACEID_Z6_20MS_ISR
+#-0011 TRACEID_Z0_20MS_ISR
+#-0012 TRACEID_Z0_100MS_ISR
+#-00F0 TRACEID_hmi_sendToUI
+#-00F1 TRACEID_hmi_receiveFromUI
+#-00F2 TRACEID_coordinator_runCycle
+#-00F3 TRACEID_drvTempAdapter_runCycle
+#-00F4 TRACEID_drvTempFlapCtrl_runCycle
+#-00F5 TRACEID_passTempAdapter_runCycle
+#-00F6 TRACEID_passTempFlapCtrl_runCycle
+#-00F7 TRACEID_blowerCtrl_runCycle
+#-00F8 TRACEID_hvacBlower_setPower
+#-00F9 TRACEID_hvacItos_readTemp
+#-00FA TRACEID_hvacFlaps_setFlaps
+
+#EntityTypeTable
+#-0001 00
+#-0002 00
+#-0003 00
+#-0004 00
+#-0005 00
+#-0010 01
+#-0011 01
+#-0012 01
+#-00F0 02
+#-00F1 02
+#-00F2 02
+#-00F3 02
+#-00F4 02
+#-00F5 02
+#-00F6 02
+#-00F7 02
+#-00F8 02
+#-00F9 02
+#-00FA 02

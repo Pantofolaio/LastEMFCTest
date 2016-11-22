@@ -1,0 +1,134 @@
+
+CPU HVAC_application {
+	/* The OS contains all the global settings that
+	 * influence the compilation and customization of the OS.
+	 */
+	OS EE {
+		/* To use assertion mechanism */
+		EE_OPT = "__ASSERT__";
+		//EE_OPT = "__USE_LEDS__";
+		/* Additional C compiler options */
+		CFLAGS = "";
+		/* Additional assembly options */
+		ASFLAGS = "";
+		/* Additional linker options */
+		LDFLAGS = "";
+		/* Special options for the PPC e200 ERIKA porting
+		 * can be specified through EE_OPT items in the OS section.
+		 * An EE_OPT is a string.
+		 */
+		/* Add Verbose to get a more detailed console output */		
+		EE_OPT = " VERBOSE ";
+		/* To invoke Freescale Codewarrior as compiler. 
+		 * As default WindRiver Diab is set.
+		 */
+		EE_OPT = "__CODEWARRIOR__";
+		/* When a linker script is used that maps code and data in the RAM.
+		 * By default, code and constant data are mapped to Flash and data to RAM.
+		 */
+		EE_OPT = "__E200ZX_EXECUTE_FROM_RAM__";
+		/* To include Debug Infos */
+		EE_OPT = "DEBUG";
+		/* To enable dynamic ISR table support that lets register ISR 
+		 * handlers at runtime calling EE_e200z7_ISR
+		 */
+		EE_OPT = "EE_ISR_DYNAMIC_TABLE";
+	
+		/* Define the MASTER_CPU by ID */
+		MASTER_CPU = "master";
+
+		/* Each Core has a CPU_DATA section in 
+		 * Erika Systems with more than one instance
+		 */
+		CPU_DATA = PPCE200ZX {
+			ID = "master";
+			/* Exact model specification */
+			MODEL = E200Z6;
+			/* The sources used on this core */
+			APP_SRC = "master.c";
+			APP_SRC = "shared.c";
+			/* Every thread can have its private stack (false)
+			 * or it can share it with other threads (true)
+			 */		
+			
+			APP_SRC = "initSystem.c";
+			APP_SRC = "AnalogPort.c";
+			APP_SRC = "CAN.c";
+			APP_SRC = "DigitalPort.c";
+			APP_SRC = "LIN.c";
+			APP_SRC = "serial.c";
+			APP_SRC = "SPI.c";
+			APP_SRC = "Timer.c";
+			APP_SRC = "runnables.c";
+			
+			
+			MULTI_STACK = TRUE {
+				IRQ_STACK = FALSE;
+			};
+			/* Generation of VLE-Code (variable-length code) */
+			VLE = TRUE;
+			/* Syze in byte of the shared stack */
+			SYS_STACK_SIZE = 4096;
+		};
+
+		CPU_DATA = PPCE200ZX {
+			MODEL = E200Z0;
+			ID = "slave";
+			APP_SRC = "slave.c";
+			
+			APP_SRC = "initSystem.c";
+			APP_SRC = "AnalogPort.c";
+			APP_SRC = "CAN.c";
+			APP_SRC = "DigitalPort.c";
+			APP_SRC = "LIN.c";
+			APP_SRC = "serial.c";
+			APP_SRC = "SPI.c";
+			APP_SRC = "Timer.c";
+			APP_SRC = "runnables.c";
+			
+			
+			MULTI_STACK = TRUE {
+				IRQ_STACK = FALSE;
+			};
+			VLE = TRUE;
+			SYS_STACK_SIZE = 4096;
+		};
+		
+		/* Specify the configuration of peripherals which are present in specific 
+		 * microcontroller / Boards
+		 */
+		MCU_DATA = PPCE200ZX {
+			MODEL = MPC5668G;
+		};
+
+		/* Kernel configurations */
+		STATUS = EXTENDED;
+		STARTUPHOOK = FALSE;
+		ERRORHOOK = FALSE;
+		SHUTDOWNHOOK = FALSE;
+		PRETASKHOOK = FALSE;
+		POSTTASKHOOK = FALSE;
+		USEGETSERVICEID = FALSE;
+		USEPARAMETERACCESS = FALSE;
+		USERESSCHEDULER = FALSE;
+
+		USEREMOTETASK = ALWAYS;
+		USEREMOTEEVENT = ALWAYS;
+
+		/* Kernel type
+		 * Defined Conformance classes:
+		 * BCC1 (OSEK)
+		 * BCC2 (OSEK)
+		 * ECC1 (OSEK)
+		 * ECC2 (OSEK)
+		 * CCB
+		 * FP (custom class)
+		 * EDF (custom class)
+		 * FRSH (custom class)
+		 */
+		KERNEL_TYPE = ECC1;
+	};
+
+	/* TASK is an application task handled by the OS */
+%%
+};

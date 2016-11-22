@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<central:AMALTHEA xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:central="http://www.amalthea.itea2.org/model/1.3.0/central" xmlns:components="http://amalthea.itea2.org/model/1.3.0/components" xmlns:hw="http://www.amalthea.itea2.org/model/1.3.0/hw" xmlns:sw="http://www.amalthea.itea2.org/model/1.3.0/sw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <swModel>
+    <runnables name="hVAC_YSCT__hmi__sendToUI" activation="20+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="1450"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__states?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__drvTempAdapter__temp?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__passTempAdapter__temp?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__blowerCtrl__blwPower?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hvacItos__interiorTemp?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__hmi__receiveFromUI" activation="20+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="419925"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hmi__switches?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hmi__drvTempTicks?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hmi__passTempTicks?type=sw.Label" access="write" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__coordinator__runCycle" activation="20+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="4119"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hmi__switches?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__airFlaps?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__blwCtrl?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__states?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__tmpMode?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__blowerCtrl__blwPower?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__drvTempAdapter__runCycle" activation="20+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="1531"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hmi__drvTempTicks?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__tmpMode?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__drvTempAdapter__temp?type=sw.Label" access="write" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__drvTempFlapCtrl__runCycle" activation="100+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="1256"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__drvTempAdapter__temp?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__drvTempFlapCtrl__flap?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hvacItos__interiorTemp?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__passTempAdapter__runCycle" activation="20+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="1488"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hmi__passTempTicks?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__tmpMode?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__passTempAdapter__temp?type=sw.Label" access="write" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__passTempFlapCtrl__runCycle" activation="100+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="1231"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__passTempAdapter__temp?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__passTempFlapCtrl__flap?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hvacItos__interiorTemp?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__blowerCtrl__runCycle" activation="100+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="1275"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__blwCtrl?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__drvTempAdapter__temp?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__passTempAdapter__temp?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__blowerCtrl__blwPower?type=sw.Label" access="write" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hvacItos__interiorTemp?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__hvacBlower__setPower" activation="100+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="825"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__blowerCtrl__blwPower?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__hvacItos__readTemp" activation="100+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="13575"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__hvacItos__interiorTemp?type=sw.Label" access="write" isBuffered="inherited"/>
+    </runnables>
+    <runnables name="hVAC_YSCT__hvacFlaps__setFlaps" activation="20+ms?type=sw.Periodic">
+      <runnableItems xsi:type="sw:InstructionsConstant" value="939313"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__coordinator__airFlaps?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__drvTempFlapCtrl__flap?type=sw.Label" access="read" isBuffered="inherited"/>
+      <runnableItems xsi:type="sw:LabelAccess" data="hVAC_YSCT__passTempFlapCtrl__flap?type=sw.Label" access="read" isBuffered="inherited"/>
+    </runnables>
+    <labels name="hVAC_YSCT__hmi__switches" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__hmi__drvTempTicks" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__hmi__passTempTicks" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__coordinator__blwCtrl" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__coordinator__tmpMode" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__coordinator__states" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__coordinator__airFlaps" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__drvTempAdapter__temp" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__drvTempFlapCtrl__flap" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__passTempAdapter__temp" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__passTempFlapCtrl__flap" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__blowerCtrl__blwPower" isBuffered="notBuffered"/>
+    <labels name="hVAC_YSCT__hvacItos__interiorTemp" isBuffered="notBuffered"/>
+    <activations xsi:type="sw:Periodic" name="20 ms">
+      <offset value="20" unit="ms"/>
+    </activations>
+    <activations xsi:type="sw:Periodic" name="100 ms">
+      <offset value="100" unit="ms"/>
+    </activations>
+  </swModel>
+  <hwModel>
+    <coreTypes name="e200z6" bitWidth="32" instructionsPerCycle="1">
+      <features xsi:type="hw:FeatureTypes" name="" value="floatingPointUnit"/>
+      <features xsi:type="hw:StrValue" name="instructionSet" value="PowerArchitectureInstructionSet"/>
+      <features xsi:type="hw:StrValue" name="instructionSet" value="VLE"/>
+    </coreTypes>
+    <coreTypes name="e200z0" bitWidth="32" instructionsPerCycle="1"/>
+    <memoryTypes name="CACHE_e200z6" type="CACHE" size="32768"/>
+    <memoryTypes name="SRAM_512KB" type="RAM" size="524288"/>
+    <memoryTypes name="SRAM_80KB" type="RAM" size="81920"/>
+    <memoryTypes name="FLASH2MB" type="FLASH_INT" size="2097152"/>
+    <networkTypes xsi:type="hw:CrossbarSwitch" name="AMBA_Crossbar" schedPolicy="RROBIN" bitWidth="64" conConnections="6"/>
+    <networkTypes xsi:type="hw:Bridge" name="AIPS_A" schedPolicy="RROBIN" bitWidth="32"/>
+    <system name="Example System">
+      <ecus name="MPC5668G Demo Board">
+        <microcontrollers name="MPC5668G">
+          <memories name="SRAM_512KB" type="SRAM_512KB?type=hw.MemType">
+            <ports xsi:type="hw:ComplexPort" name="CONN_SRAM512KB" network="Amba+Crossbar+Switch?type=hw.Network" bitWidth="64" baseAddress="1073741824" addressRange="524288" direction="RW" writeCycles="1" readCycles="1"/>
+            <prescaler name="PS_SRAM512KB" clockRatio="1.0" quartz="Q100MHZ?type=hw.Quartz"/>
+          </memories>
+          <memories name="SRAM_80KB" type="SRAM_80KB?type=hw.MemType">
+            <ports xsi:type="hw:ComplexPort" name="CONN_SRAM80KB" network="Amba+Crossbar+Switch?type=hw.Network" bitWidth="64" baseAddress="1074266112" addressRange="81920" direction="RW" writeCycles="1" readCycles="1"/>
+            <prescaler name="PS_SRAM80KB" clockRatio="1.0"/>
+          </memories>
+          <memories name="FLASH2MB" type="FLASH2MB?type=hw.MemType">
+            <ports xsi:type="hw:ComplexPort" name="CONN_z6_FLASH2MB" network="Amba+Crossbar+Switch?type=hw.Network" bitWidth="64" addressRange="536870911" direction="R" readCycles="3"/>
+            <ports xsi:type="hw:ComplexPort" name="CONN_others_FLASH2MB" network="Amba+Crossbar+Switch?type=hw.Network" bitWidth="64" addressRange="536870911" direction="R" readCycles="3"/>
+            <prescaler name="PS_FLASH2MB" clockRatio="1.0" quartz="Q100MHZ?type=hw.Quartz"/>
+          </memories>
+          <networks name="Amba Crossbar Switch" type="AMBA_Crossbar?type=hw.CrossbarSwitch"/>
+          <components name="AIPS_PeripheralBridge_A">
+            <networks name="AIPS_A" type="AIPS_A?type=hw.Bridge"/>
+            <ports xsi:type="hw:ComplexPort" name="CONN_AIPS_A" network="Amba+Crossbar+Switch?type=hw.Network" bitWidth="32" baseAddress="3221225472" addressRange="536870912" direction="RW" writeCycles="2" readCycles="2"/>
+            <prescaler name="PS_AIPS_A" clockRatio="0.5" quartz="Q100MHZ?type=hw.Quartz"/>
+          </components>
+          <components name="AIPS_PeripheralBridge_B">
+            <networks name="AIPS_B" type="AIPS_A?type=hw.Bridge"/>
+            <ports xsi:type="hw:ComplexPort" name="CONN_AIPS_B" network="Amba+Crossbar+Switch?type=hw.Network" bitWidth="32" baseAddress="3758096384" addressRange="536870912" direction="RW" writeCycles="2" readCycles="2"/>
+            <prescaler name="PS_AIPS_B" clockRatio="0.5" quartz="Q100MHZ?type=hw.Quartz"/>
+          </components>
+          <components name="FlexRay">
+            <ports xsi:type="hw:ComplexPort" name="CONN_FlexRayBusMasterInterface" network="Amba+Crossbar+Switch?type=hw.Network" isMaster="true" bitWidth="64" direction="RW" writeCycles="1" readCycles="1" schedValue="2"/>
+            <ports xsi:type="hw:ComplexPort" name="CONN_FlexRayControlHostInterface" network="AIPS_A?type=hw.Network" bitWidth="32" baseAddress="3288186880" addressRange="16384" direction="R"/>
+          </components>
+          <components name="Ethernet">
+            <ports xsi:type="hw:ComplexPort" name="CONN_Ethernet" network="Amba+Crossbar+Switch?type=hw.Network" isMaster="true" bitWidth="64" direction="RW" writeCycles="1" readCycles="1" schedValue="2"/>
+            <ports xsi:type="hw:ComplexPort" name="CONN_FEC" network="AIPS_B?type=hw.Network" bitWidth="32" baseAddress="4294230016" addressRange="16384" direction="R"/>
+          </components>
+          <quartzes name="Q100MHZ" frequency="100000000" type="STATIC"/>
+          <cores name="e200z6" coreType="e200z6?type=hw.CoreType">
+            <memories name="CACHE_e200z6" type="CACHE_e200z6?type=hw.MemType"/>
+            <ports xsi:type="hw:ComplexPort" name="CONN_e200z6" network="Amba+Crossbar+Switch?type=hw.Network" isMaster="true" bitWidth="64" direction="RW" writeCycles="1" readCycles="1"/>
+            <prescaler name="PS_e200z6" clockRatio="1.0" quartz="Q100MHZ?type=hw.Quartz"/>
+          </cores>
+          <cores name="e200z0" coreType="e200z0?type=hw.CoreType">
+            <ports xsi:type="hw:ComplexPort" name="CONN_e200z0" network="Amba+Crossbar+Switch?type=hw.Network" isMaster="true" bitWidth="32" direction="RW" writeCycles="1" readCycles="1"/>
+            <prescaler name="PS_e200z0" clockRatio="0.5" quartz="Q100MHZ?type=hw.Quartz"/>
+          </cores>
+        </microcontrollers>
+      </ecus>
+    </system>
+  </hwModel>
+  <componentsModel>
+    <components name="ModeCoordinator">
+      <ports xsi:type="components:FInterfacePort" name="switches" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.9"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="autoPwr" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.0"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="blwCtrl" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.1"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="tmpMode" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.3"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="states" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.7"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="airFlaps" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.6"/>
+      </ports>
+    </components>
+    <components name="TemperatureAdapter">
+      <ports xsi:type="components:FInterfacePort" name="ticks" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.4"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="mode" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.3"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="temp" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+    </components>
+    <components name="BlowerCtrl">
+      <ports xsi:type="components:FInterfacePort" name="ctrl" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.1"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="interiorTemp" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="drvTempSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="passTempSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="blwPower" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.0"/>
+      </ports>
+    </components>
+    <components name="TemperatureFlapCtrl">
+      <ports xsi:type="components:FInterfacePort" name="interiorTemp" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="setTemp" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="flap" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.5"/>
+      </ports>
+    </components>
+    <components name="ITOS">
+      <ports xsi:type="components:FInterfacePort" name="interiorTemp" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+    </components>
+    <components name="HVAC_Blower">
+      <ports xsi:type="components:FInterfacePort" name="power" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.0"/>
+      </ports>
+    </components>
+    <components name="HVAC_Flaps">
+      <ports xsi:type="components:FInterfacePort" name="drvTempFlapSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.5"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="passTempFlapSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.5"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="airFlowFlapsSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.6"/>
+      </ports>
+    </components>
+    <components name="HMI_Communicator">
+      <ports xsi:type="components:FInterfacePort" name="switches" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.9"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="drvTempTicks" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.4"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="passTempTicks" kind="PROVIDES">
+        <interface href="amlt:/#//@interfaces.4"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="states" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.7"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="blwValue" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.0"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="drvTempSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="passTempSet" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+      <ports xsi:type="components:FInterfacePort" name="interiorTemp" kind="REQUIRES">
+        <interface href="amlt:/#//@interfaces.2"/>
+      </ports>
+    </components>
+    <systems name="HVAC_YSCT">
+      <componentInstances name="hmi" type="HMI_Communicator?type=components.Component"/>
+      <componentInstances name="coordinator" type="ModeCoordinator?type=components.Component"/>
+      <componentInstances name="drvTempAdapter" type="TemperatureAdapter?type=components.Component"/>
+      <componentInstances name="drvTempFlapCtrl" type="TemperatureFlapCtrl?type=components.Component"/>
+      <componentInstances name="passTempAdapter" type="TemperatureAdapter?type=components.Component"/>
+      <componentInstances name="passTempFlapCtrl" type="TemperatureFlapCtrl?type=components.Component"/>
+      <componentInstances name="blowerCtrl" type="BlowerCtrl?type=components.Component"/>
+      <componentInstances name="hvacBlower" type="HVAC_Blower?type=components.Component"/>
+      <componentInstances name="hvacItos" type="ITOS?type=components.Component"/>
+      <componentInstances name="hvacFlaps" type="HVAC_Flaps?type=components.Component"/>
+      <connectors name="hmi.switches->coordinator.switches">
+        <sourcePort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/switches?type=components.FInterfacePort"/>
+        <targetPort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/switches?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="hmi.drvTempTicks->drvTempAdapter.ticks">
+        <sourcePort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/drvTempTicks?type=components.FInterfacePort"/>
+        <targetPort instance="drvTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/ticks?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="hmi.passTempTicks->passTempAdapter.ticks">
+        <sourcePort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/passTempTicks?type=components.FInterfacePort"/>
+        <targetPort instance="passTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/ticks?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="coordinator.airFlaps->hvacFlaps.airFlowFlapsSet">
+        <sourcePort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/airFlaps?type=components.FInterfacePort"/>
+        <targetPort instance="hvacFlaps?type=components.ComponentInstance" port="HVAC_Flaps/airFlowFlapsSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="coordinator.blwCtrl->blowerCtrl.ctrl">
+        <sourcePort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/blwCtrl?type=components.FInterfacePort"/>
+        <targetPort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/ctrl?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="coordinator.states->hmi.states">
+        <sourcePort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/states?type=components.FInterfacePort"/>
+        <targetPort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/states?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="coordinator.tmpMode->drvTempAdapter.mode">
+        <sourcePort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/tmpMode?type=components.FInterfacePort"/>
+        <targetPort instance="drvTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/mode?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="coordinator.tmpMode->passTempAdapter.mode">
+        <sourcePort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/tmpMode?type=components.FInterfacePort"/>
+        <targetPort instance="passTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/mode?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="drvTempAdapter.temp->blowerCtrl.drvTempSet">
+        <sourcePort instance="drvTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/temp?type=components.FInterfacePort"/>
+        <targetPort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/drvTempSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="drvTempAdapter.temp->hmi.drvTempSet">
+        <sourcePort instance="drvTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/temp?type=components.FInterfacePort"/>
+        <targetPort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/drvTempSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="drvTempAdapter.temp->drvTempFlapCtrl.setTemp">
+        <sourcePort instance="drvTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/temp?type=components.FInterfacePort"/>
+        <targetPort instance="drvTempFlapCtrl?type=components.ComponentInstance" port="TemperatureFlapCtrl/setTemp?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="drvTempFlapCtrl.flap->hvacFlaps.drvTempFlapSet">
+        <sourcePort instance="drvTempFlapCtrl?type=components.ComponentInstance" port="TemperatureFlapCtrl/flap?type=components.FInterfacePort"/>
+        <targetPort instance="hvacFlaps?type=components.ComponentInstance" port="HVAC_Flaps/drvTempFlapSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="passTempAdapter.temp->blowerCtrl.passTempSet">
+        <sourcePort instance="passTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/temp?type=components.FInterfacePort"/>
+        <targetPort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/passTempSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="passTempAdapter.temp->hmi.passTempSet">
+        <sourcePort instance="passTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/temp?type=components.FInterfacePort"/>
+        <targetPort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/passTempSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="passTempAdapter.temp->passTempFlapCtrl.setTemp">
+        <sourcePort instance="passTempAdapter?type=components.ComponentInstance" port="TemperatureAdapter/temp?type=components.FInterfacePort"/>
+        <targetPort instance="passTempFlapCtrl?type=components.ComponentInstance" port="TemperatureFlapCtrl/setTemp?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="passTempFlapCtrl.flap->hvacFlaps.passTempFlapSet">
+        <sourcePort instance="passTempFlapCtrl?type=components.ComponentInstance" port="TemperatureFlapCtrl/flap?type=components.FInterfacePort"/>
+        <targetPort instance="hvacFlaps?type=components.ComponentInstance" port="HVAC_Flaps/passTempFlapSet?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="blowerCtrl.blwPower->hvacBlower.power">
+        <sourcePort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/blwPower?type=components.FInterfacePort"/>
+        <targetPort instance="hvacBlower?type=components.ComponentInstance" port="HVAC_Blower/power?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="blowerCtrl.blwPower->hmi.blwValue">
+        <sourcePort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/blwPower?type=components.FInterfacePort"/>
+        <targetPort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/blwValue?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="blowerCtrl.blwPower->coordinator.autoPwr">
+        <sourcePort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/blwPower?type=components.FInterfacePort"/>
+        <targetPort instance="coordinator?type=components.ComponentInstance" port="ModeCoordinator/autoPwr?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="hvacItos.interiorTemp->hmi.interiorTemp">
+        <sourcePort instance="hvacItos?type=components.ComponentInstance" port="ITOS/interiorTemp?type=components.FInterfacePort"/>
+        <targetPort instance="hmi?type=components.ComponentInstance" port="HMI_Communicator/interiorTemp?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="hvacItos.interiorTemp->blowerCtrl.interiorTemp">
+        <sourcePort instance="hvacItos?type=components.ComponentInstance" port="ITOS/interiorTemp?type=components.FInterfacePort"/>
+        <targetPort instance="blowerCtrl?type=components.ComponentInstance" port="BlowerCtrl/interiorTemp?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="hvacItos.interiorTemp->drvTempFlapCtrl.interiorTemp">
+        <sourcePort instance="hvacItos?type=components.ComponentInstance" port="ITOS/interiorTemp?type=components.FInterfacePort"/>
+        <targetPort instance="drvTempFlapCtrl?type=components.ComponentInstance" port="TemperatureFlapCtrl/interiorTemp?type=components.FInterfacePort"/>
+      </connectors>
+      <connectors name="hvacItos.interiorTemp->passTempFlapCtrl.interiorTemp">
+        <sourcePort instance="hvacItos?type=components.ComponentInstance" port="ITOS/interiorTemp?type=components.FInterfacePort"/>
+        <targetPort instance="passTempFlapCtrl?type=components.ComponentInstance" port="TemperatureFlapCtrl/interiorTemp?type=components.FInterfacePort"/>
+      </connectors>
+    </systems>
+  </componentsModel>
+</central:AMALTHEA>

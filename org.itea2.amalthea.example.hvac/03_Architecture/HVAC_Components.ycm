@@ -1,0 +1,222 @@
+package hvac {
+
+	import hvac.*
+
+	component ModeCoordinator {
+		parameter blwMaxSteps: integer := 10
+
+		port switches requires ModeCoordinator.switches
+
+		port autoPwr requires BlowerCtrl.power
+
+		port blwCtrl provides BlowerCtrl.ctrl
+
+		port tmpMode provides TemperatureAdapter.Signals
+
+		port states provides ModeCoordinator.States
+
+		port airFlaps provides AirFlow.Flaps
+
+		behavior runCycle
+			ports airFlaps, blwCtrl, states, switches, tmpMode, autoPwr
+			trigger every 20 ms
+			pim
+			with statechart -> ModeCoordinator {
+				map parameter blwMaxSteps -> Blower.maxSteps
+				
+				switches.acSwitch -> HMI.AC_Switch
+				switches.blwMinusTicks -> Blower.decreaseTicks
+				switches.blwPlusTicks -> Blower.increaseTicks
+				switches.commToggle -> HMI.ComToggle
+				switches.levelSwitch -> HMI.levelSwitch
+				switches.recircSwitch -> HMI.recircSwitch
+				
+				blwCtrl.autoMode -> Blower.auto
+				blwCtrl.passThroughMode -> Blower.manual
+				blwCtrl.passThroughValue -> Blower.power
+				
+				tmpMode.turnOff -> Temperature.off
+				tmpMode.turnOn -> Temperature.on
+				
+				states.acState -> Temperature.AC_State
+				states.levelState -> HMI.levelState
+				states.recircState -> AirFlaps.recircState
+				
+				airFlaps.defrostLeftSet -> AirFlaps.defrostLeftSet
+				airFlaps.defrostRightSet -> AirFlaps.defrostRightSet
+				airFlaps.floorLeftSet -> AirFlaps.floorLeftSet
+				airFlaps.floorRightSet -> AirFlaps.floorRightSet
+				airFlaps.ventLeftSet -> AirFlaps.ventLeftSet
+				airFlaps.ventRightSet -> AirFlaps.ventRightSet
+				airFlaps.recircSet -> AirFlaps.recircSet
+			}	
+	}
+	
+	component TemperatureAdapter {
+		port ticks requires TemperatureAdapter.Ticks
+		
+		port mode requires TemperatureAdapter.Signals
+		
+		port temp provides Temperature
+		
+		behavior runCycle
+			ports mode, temp, ticks
+			trigger every 20 ms
+			pim
+			with statechart -> TemperatureAdapter {
+				ticks.commToggle -> temperatureSet
+				ticks.minusTicks -> minusTicks
+				ticks.plusTicks -> plusTicks
+				
+				mode.turnOff -> off
+				mode.turnOn -> on
+				
+				temp.temp -> temp
+			}
+	}
+	
+	component BlowerCtrl {
+		port ctrl requires BlowerCtrl.ctrl
+		
+		port interiorTemp requires Temperature
+		
+		port drvTempSet requires Temperature 
+		
+		port passTempSet requires Temperature
+		
+		port blwPower provides BlowerCtrl.power
+		
+		behavior runCycle 
+			ports blwPower, ctrl, drvTempSet, interiorTemp, passTempSet
+			trigger every 100 ms
+			pim
+			with statechart -> BlowerCtrl {
+				ctrl.autoMode -> autoMode
+				ctrl.passThroughMode -> passThroughMode
+				ctrl.passThroughValue -> passThroughValue
+				
+				interiorTemp.temp -> interiorTemp
+				
+				drvTempSet.temp -> drvRefTemp
+				
+				passTempSet.temp -> passRefTemp
+				
+				blwPower.blwOutValue -> power
+			}
+	}
+	
+	component TemperatureFlapCtrl {
+		port interiorTemp requires Temperature
+		
+		port setTemp requires Temperature
+		
+		port flap provides TemperatureCtrl.Flap
+
+		behavior runCycle
+			ports flap, interiorTemp, setTemp
+			trigger every 100 ms
+			pim
+			with statechart->TemperatureFlapCtrl {
+				interiorTemp.temp -> interiorTemp
+				
+				setTemp.temp -> setTemp
+				
+				flap.tempFlapSet -> tempFlapSet
+			}
+	}
+	
+	component ITOS {
+		port interiorTemp provides Temperature
+		
+		behavior readTemp 
+			ports interiorTemp 
+			trigger every 100 ms
+	}
+	
+	component HVAC_Blower {
+		port power requires BlowerCtrl.power
+		
+		behavior setPower 
+			ports power 
+			trigger every 100 ms
+	}
+	
+	component HVAC_Flaps {
+		port drvTempFlapSet requires TemperatureCtrl.Flap
+		port passTempFlapSet requires TemperatureCtrl.Flap
+		port airFlowFlapsSet requires AirFlow.Flaps
+		
+		behavior setFlaps 
+			ports airFlowFlapsSet, drvTempFlapSet, passTempFlapSet
+			trigger every 20 ms
+	}
+	
+	component HMI_Communicator {
+		port switches provides ModeCoordinator.switches
+		port drvTempTicks provides TemperatureAdapter.Ticks
+		port passTempTicks provides TemperatureAdapter.Ticks
+		
+		port states requires ModeCoordinator.States
+		port blwValue requires BlowerCtrl.power
+		port drvTempSet requires Temperature
+		port passTempSet requires Temperature
+		port interiorTemp requires Temperature
+		
+		behavior sendToUI 
+			ports states, blwValue, drvTempSet, passTempSet, interiorTemp
+			trigger every 20 ms
+			
+		behavior receiveFromUI 
+			ports switches, drvTempTicks, passTempTicks
+			trigger every 20 ms
+			pim
+	}
+	
+	system HVAC_YSCT {
+		instance hmi: HMI_Communicator;
+		instance coordinator: ModeCoordinator;
+		instance drvTempAdapter: TemperatureAdapter;
+		instance drvTempFlapCtrl: TemperatureFlapCtrl;
+		
+		instance passTempAdapter: TemperatureAdapter;
+		instance passTempFlapCtrl: TemperatureFlapCtrl;
+		
+		instance blowerCtrl: BlowerCtrl;
+		
+		instance hvacBlower: HVAC_Blower;
+		instance hvacItos: ITOS;
+		instance hvacFlaps: HVAC_Flaps;
+		
+		connect hmi.switches with coordinator.switches;
+		connect hmi.drvTempTicks with drvTempAdapter.ticks;
+		connect hmi.passTempTicks with passTempAdapter.ticks;
+		
+		connect coordinator.airFlaps with hvacFlaps.airFlowFlapsSet;
+		connect coordinator.blwCtrl with blowerCtrl.ctrl;
+		connect coordinator.states with hmi.states;
+		connect coordinator.tmpMode with drvTempAdapter.mode;
+		connect coordinator.tmpMode with passTempAdapter.mode;
+		
+		connect drvTempAdapter.temp with blowerCtrl.drvTempSet;
+		connect drvTempAdapter.temp with hmi.drvTempSet;
+		connect drvTempAdapter.temp with drvTempFlapCtrl.setTemp;
+		
+		connect drvTempFlapCtrl.flap with hvacFlaps.drvTempFlapSet;
+		
+		connect passTempAdapter.temp with blowerCtrl.passTempSet;
+		connect passTempAdapter.temp with hmi.passTempSet;
+		connect passTempAdapter.temp with passTempFlapCtrl.setTemp;
+		
+		connect passTempFlapCtrl.flap with hvacFlaps.passTempFlapSet;
+		
+		connect blowerCtrl.blwPower with hvacBlower.power;
+		connect blowerCtrl.blwPower with hmi.blwValue;
+		connect blowerCtrl.blwPower with coordinator.autoPwr;
+		
+		connect hvacItos.interiorTemp with hmi.interiorTemp;
+		connect hvacItos.interiorTemp with blowerCtrl.interiorTemp;
+		connect hvacItos.interiorTemp with drvTempFlapCtrl.interiorTemp;
+		connect hvacItos.interiorTemp with passTempFlapCtrl.interiorTemp;
+	}
+	
+}

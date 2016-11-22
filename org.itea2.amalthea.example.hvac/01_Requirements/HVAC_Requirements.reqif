@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0">
+  <THE-HEADER>
+    <REQ-IF-HEADER IDENTIFIER="rmf-e4ca47c6-fb7c-4067-ae5f-d6a24634f4c6">
+      <COMMENT>Created by: Brink</COMMENT>
+      <CREATION-TIME>2014-03-10T10:11:52.790+01:00</CREATION-TIME>
+      <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
+      <REQ-IF-VERSION>1.0.1</REQ-IF-VERSION>
+      <SOURCE-TOOL-ID>ProR (http://pror.org)</SOURCE-TOOL-ID>
+      <TITLE>HVAC Requirements</TITLE>
+    </REQ-IF-HEADER>
+  </THE-HEADER>
+  <CORE-CONTENT>
+    <REQ-IF-CONTENT>
+      <DATATYPES>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_BRG4YKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:11:52.790+01:00" LONG-NAME="T_String32k" MAX-LENGTH="32000"/>
+        <DATATYPE-DEFINITION-ENUMERATION IDENTIFIER="_0kuccK9yEeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:28:57.005+01:00" LONG-NAME="T_Status">
+          <SPECIFIED-VALUES>
+            <ENUM-VALUE IDENTIFIER="_3iDJMK9yEeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:29:22.247+01:00" LONG-NAME="new"/>
+            <ENUM-VALUE IDENTIFIER="_6OSF8K9yEeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:29:40.277+01:00" LONG-NAME="accepted"/>
+            <ENUM-VALUE IDENTIFIER="_7PCYUK9yEeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:29:47.227+01:00" LONG-NAME="rejected"/>
+          </SPECIFIED-VALUES>
+        </DATATYPE-DEFINITION-ENUMERATION>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_eALmkK90EeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:40:47.957+01:00" LONG-NAME="T_String10" MAX-LENGTH="10"/>
+      </DATATYPES>
+      <SPEC-TYPES>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_BRG4Yag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:11:52.790+01:00" LONG-NAME="Requirement Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_BRG4Yqg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:11:52.790+01:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_BRG4YKg0EeOsnrBaB07QiA</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_meZa8K9yEeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:25:46.867+01:00" LONG-NAME="ID">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_eALmkK90EeOnNc_3lcUR2w</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_y28E8K9yEeOnNc_3lcUR2w" LAST-CHANGE="2014-03-19T15:28:39.573+01:00" LONG-NAME="Status">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_0kuccK9yEeOnNc_3lcUR2w</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPECIFICATION-TYPE IDENTIFIER="_BRG4Y6g0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:11:52.790+01:00" LONG-NAME="Specification Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_BRG4ZKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:11:52.790+01:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_BRG4YKg0EeOsnrBaB07QiA</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPECIFICATION-TYPE>
+      </SPEC-TYPES>
+      <SPEC-OBJECTS>
+        <SPEC-OBJECT DESC="REQ-1" IDENTIFIER="_BRG4Zag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-19T15:36:38.721+01:00" LONG-NAME="REQ-1">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="In the Automode the system must realize a two zone climate control">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_6OSF8K9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="REQ-2" IDENTIFIER="_2oHrAag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:26:09.801+01:00" LONG-NAME="REQ-2">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="In the Manualmode the system must realize a one zone climate control">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_6OSF8K9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="REQ-3" IDENTIFIER="_3FlDEag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:17:51.895+01:00" LONG-NAME="REQ-3">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The system must control a blower depending on the controller">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_6OSF8K9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-3">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="REQ-4" IDENTIFIER="_4dppQag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:01.442+01:00" LONG-NAME="REQ-4">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The temperature must be read with a accuracy of 0.1°C, using an external Sensor">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_6OSF8K9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-4">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="REQ-5" IDENTIFIER="_4zFGsag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:03.938+01:00" LONG-NAME="REQ-5">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The user handling of the system must be able by using an interface for a external user interface">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_6OSF8K9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-5">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="REQ-6" IDENTIFIER="_5IpuEag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:06.169+01:00" LONG-NAME="REQ-6">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The user handling of the system must be able by using a Display directly connected to the system">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_6OSF8K9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-6">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="REQ-7" IDENTIFIER="_5ir-sag0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-20T17:26:44.108+01:00" LONG-NAME="REQ-7">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The system must implement either [REQ-5] or [REQ-6].">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4Yqg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_3iDJMK9yEeOnNc_3lcUR2w</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_y28E8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-7">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_meZa8K9yEeOnNc_3lcUR2w</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_BRG4Yag0EeOsnrBaB07QiA</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+      </SPEC-OBJECTS>
+      <SPECIFICATIONS>
+        <SPECIFICATION IDENTIFIER="_BRG4Zqg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:16:14.364+01:00" LONG-NAME="Specification Document">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Requirements Document">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_BRG4ZKg0EeOsnrBaB07QiA</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPECIFICATION-TYPE-REF>_BRG4Y6g0EeOsnrBaB07QiA</SPECIFICATION-TYPE-REF>
+          </TYPE>
+          <CHILDREN>
+            <SPEC-HIERARCHY DESC="REQ-1" IDENTIFIER="_BRG4Z6g0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:11:52.790+01:00" LONG-NAME="REQ-1">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_BRG4Zag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN/>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_2oHrAKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:17:47.215+01:00" LONG-NAME="REQ-2">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_2oHrAag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="REQ-3" IDENTIFIER="_3FlDEKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:17:51.895+01:00" LONG-NAME="REQ-3">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_3FlDEag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="REQ-4" IDENTIFIER="_4dppQKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:01.442+01:00" LONG-NAME="REQ-4">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_4dppQag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="REQ-5" IDENTIFIER="_4zFGsKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:03.938+01:00" LONG-NAME="REQ-5">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_4zFGsag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="REQ-6" IDENTIFIER="_5IpuEKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:06.169+01:00" LONG-NAME="REQ-6">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_5IpuEag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY DESC="REQ-7" IDENTIFIER="_5ir-sKg0EeOsnrBaB07QiA" LAST-CHANGE="2014-03-10T10:18:08.571+01:00" LONG-NAME="REQ-7">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_5ir-sag0EeOsnrBaB07QiA</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+          </CHILDREN>
+        </SPECIFICATION>
+      </SPECIFICATIONS>
+    </REQ-IF-CONTENT>
+  </CORE-CONTENT>
+  <TOOL-EXTENSIONS>
+    <REQ-IF-TOOL-EXTENSION>
+      <configuration:ProrToolExtension>
+        <configuration:specViewConfigurations>
+          <configuration:ProrSpecViewConfiguration specification="_BRG4Zqg0EeOsnrBaB07QiA">
+            <configuration:columns>
+              <configuration:Column label="ID"/>
+              <configuration:Column label="Description" width="458"/>
+              <configuration:Column label="Status"/>
+            </configuration:columns>
+            <configuration:leftHeaderColumn>
+              <configuration:Column label="Lead Header Column" width="30"/>
+            </configuration:leftHeaderColumn>
+          </configuration:ProrSpecViewConfiguration>
+        </configuration:specViewConfigurations>
+        <configuration:generalConfiguration>
+          <configuration:ProrGeneralConfiguration>
+            <configuration:labelConfiguration>
+              <configuration:LabelConfiguration>
+                <defaultLabel>ID</defaultLabel>
+                <defaultLabel>Description</defaultLabel>
+              </configuration:LabelConfiguration>
+            </configuration:labelConfiguration>
+          </configuration:ProrGeneralConfiguration>
+        </configuration:generalConfiguration>
+        <configuration:presentationConfigurations>
+          <configuration:ProrPresentationConfigurations/>
+        </configuration:presentationConfigurations>
+      </configuration:ProrToolExtension>
+    </REQ-IF-TOOL-EXTENSION>
+  </TOOL-EXTENSIONS>
+</REQ-IF>

@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OT1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.gliwa.com/ot1/download/OT1.xsd" version="0.2">
+  <SchedulingEntity xsi:type="AutosarOsType" uuid="0" name="Core0">
+    <Clock maxAbsTime="2147483647">
+      <Tickduration denominator="1" nominator="10" unit="ns"/>
+    </Clock>
+    <EventDescription>
+      <EventIdMapping eventId="0" eventType="sched_activation"/>
+      <EventIdMapping eventId="2" eventType="sched_start"/>
+      <EventIdMapping eventId="6" eventType="sched_preempt"/>
+      <EventIdMapping eventId="8" eventType="sched_terminate"/>
+      <EventIdMapping eventId="4" eventType="sched_wait"/>
+      <EventIdMapping eventId="5" eventType="sched_release"/>
+      <EventIdMapping eventId="3" eventType="sched_stop"/>
+      <EventIdMapping eventId="9" eventType="runnable_start"/>
+      <EventIdMapping eventId="10" eventType="runnable_stop"/>
+      <EventIdMapping eventId="17" eventType="codeblock_start"/>
+      <EventIdMapping eventId="18" eventType="codeblock_stop"/>
+      <EventIdMapping eventId="22" eventType="sig_receive"/>
+      <EventIdMapping eventId="21" eventType="sig_transmit"/>
+    </EventDescription>
+    <Element xsi:type="TaskType" id="1" name="TRACEID_TASK_CP0">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="2" name="TRACEID_TASK_CP1">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="3" name="TRACEID_TASK_PP0">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="4" name="TRACEID_TASK_PP1">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="5" name="TRACEID_TASK_PP2">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="InterruptType" id="17" name="TRACEID_Z0_20MS_ISR">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="InterruptType" id="16" name="TRACEID_Z6_20MS_ISR">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="InterruptType" id="18" name="TRACEID_Z0_100MS_ISR">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="250" name="TRACEID_hvacFlaps_setFlaps">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="248" name="TRACEID_hvacBlower_setPower">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="249" name="TRACEID_hvacItos_readTemp">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="246" name="TRACEID_passTempFlapCtrl_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="247" name="TRACEID_blowerCtrl_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="244" name="TRACEID_drvTempFlapCtrl_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="245" name="TRACEID_passTempAdapter_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="242" name="TRACEID_coordinator_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="243" name="TRACEID_drvTempAdapter_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="240" name="TRACEID_hmi_sendToUI">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="241" name="TRACEID_hmi_receiveFromUI">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Traces>
+      <XmlTrace uuid="1">
+        <TraceEntry elementRefId="16" eventId="2" time="1994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="1995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="1995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="1995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="1996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="2058887"/>
+        <TraceEntry elementRefId="242" eventId="9" time="2059283"/>
+        <TraceEntry elementRefId="242" eventId="10" time="2063159"/>
+        <TraceEntry elementRefId="250" eventId="9" time="2063555"/>
+        <TraceEntry elementRefId="250" eventId="10" time="2073144"/>
+        <TraceEntry elementRefId="1" eventId="8" time="2073540"/>
+        <TraceEntry elementRefId="16" eventId="2" time="3994784"/>
+        <TraceEntry elementRefId="1" eventId="0" time="3995156"/>
+        <TraceEntry elementRefId="16" eventId="8" time="3995526"/>
+        <TraceEntry elementRefId="1" eventId="2" time="3995874"/>
+        <TraceEntry elementRefId="241" eventId="9" time="3996256"/>
+        <TraceEntry elementRefId="241" eventId="10" time="4012021"/>
+        <TraceEntry elementRefId="242" eventId="9" time="4012398"/>
+        <TraceEntry elementRefId="242" eventId="10" time="4015876"/>
+        <TraceEntry elementRefId="250" eventId="9" time="4016257"/>
+        <TraceEntry elementRefId="250" eventId="10" time="4380858"/>
+        <TraceEntry elementRefId="1" eventId="8" time="4381254"/>
+        <TraceEntry elementRefId="16" eventId="2" time="5994780"/>
+        <TraceEntry elementRefId="1" eventId="0" time="5995152"/>
+        <TraceEntry elementRefId="16" eventId="8" time="5995522"/>
+        <TraceEntry elementRefId="1" eventId="2" time="5995870"/>
+        <TraceEntry elementRefId="241" eventId="9" time="5996252"/>
+        <TraceEntry elementRefId="241" eventId="10" time="6417263"/>
+        <TraceEntry elementRefId="242" eventId="9" time="6417659"/>
+        <TraceEntry elementRefId="242" eventId="10" time="6421535"/>
+        <TraceEntry elementRefId="250" eventId="9" time="6421931"/>
+        <TraceEntry elementRefId="250" eventId="10" time="7331812"/>
+        <TraceEntry elementRefId="1" eventId="8" time="7332208"/>
+        <TraceEntry elementRefId="16" eventId="2" time="7994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="7995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="7995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="7995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="7996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="8252825"/>
+        <TraceEntry elementRefId="242" eventId="9" time="8253221"/>
+        <TraceEntry elementRefId="242" eventId="10" time="8257097"/>
+        <TraceEntry elementRefId="250" eventId="9" time="8257493"/>
+        <TraceEntry elementRefId="250" eventId="10" time="8266202"/>
+        <TraceEntry elementRefId="1" eventId="8" time="8266598"/>
+        <TraceEntry elementRefId="16" eventId="2" time="9994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="9995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="9995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="9995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="9996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="10029613"/>
+        <TraceEntry elementRefId="242" eventId="9" time="10030009"/>
+        <TraceEntry elementRefId="242" eventId="10" time="10033885"/>
+        <TraceEntry elementRefId="250" eventId="9" time="10034281"/>
+        <TraceEntry elementRefId="250" eventId="10" time="10401290"/>
+        <TraceEntry elementRefId="1" eventId="8" time="10401686"/>
+        <TraceEntry elementRefId="16" eventId="2" time="11994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="11995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="11995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="11995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="11996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="12029241"/>
+        <TraceEntry elementRefId="242" eventId="9" time="12029637"/>
+        <TraceEntry elementRefId="242" eventId="10" time="12033513"/>
+        <TraceEntry elementRefId="250" eventId="9" time="12033909"/>
+        <TraceEntry elementRefId="250" eventId="10" time="12931704"/>
+        <TraceEntry elementRefId="1" eventId="8" time="12932100"/>
+        <TraceEntry elementRefId="16" eventId="2" time="13994784"/>
+        <TraceEntry elementRefId="1" eventId="0" time="13995156"/>
+        <TraceEntry elementRefId="16" eventId="8" time="13995526"/>
+        <TraceEntry elementRefId="1" eventId="2" time="13995874"/>
+        <TraceEntry elementRefId="241" eventId="9" time="13996256"/>
+        <TraceEntry elementRefId="241" eventId="10" time="14252795"/>
+        <TraceEntry elementRefId="242" eventId="9" time="14253191"/>
+        <TraceEntry elementRefId="242" eventId="10" time="14257067"/>
+        <TraceEntry elementRefId="250" eventId="9" time="14257463"/>
+        <TraceEntry elementRefId="250" eventId="10" time="14266190"/>
+        <TraceEntry elementRefId="1" eventId="8" time="14266586"/>
+        <TraceEntry elementRefId="16" eventId="2" time="15994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="15995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="15995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="15995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="15996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="16252793"/>
+        <TraceEntry elementRefId="242" eventId="9" time="16253189"/>
+        <TraceEntry elementRefId="242" eventId="10" time="16257065"/>
+        <TraceEntry elementRefId="250" eventId="9" time="16257461"/>
+        <TraceEntry elementRefId="250" eventId="10" time="16630076"/>
+        <TraceEntry elementRefId="1" eventId="8" time="16630472"/>
+        <TraceEntry elementRefId="16" eventId="2" time="17994786"/>
+        <TraceEntry elementRefId="1" eventId="0" time="17995158"/>
+        <TraceEntry elementRefId="16" eventId="8" time="17995528"/>
+        <TraceEntry elementRefId="1" eventId="2" time="17995876"/>
+        <TraceEntry elementRefId="241" eventId="9" time="17996258"/>
+        <TraceEntry elementRefId="241" eventId="10" time="18252797"/>
+        <TraceEntry elementRefId="242" eventId="9" time="18253193"/>
+        <TraceEntry elementRefId="242" eventId="10" time="18257069"/>
+        <TraceEntry elementRefId="250" eventId="9" time="18257465"/>
+        <TraceEntry elementRefId="250" eventId="10" time="19181314"/>
+        <TraceEntry elementRefId="1" eventId="8" time="19181710"/>
+        <TraceEntry elementRefId="16" eventId="2" time="19994784"/>
+        <TraceEntry elementRefId="1" eventId="0" time="19995156"/>
+        <TraceEntry elementRefId="16" eventId="8" time="19995526"/>
+        <TraceEntry elementRefId="1" eventId="2" time="19995874"/>
+        <TraceEntry elementRefId="241" eventId="9" time="19996256"/>
+        <TraceEntry elementRefId="241" eventId="10" time="20252795"/>
+        <TraceEntry elementRefId="242" eventId="9" time="20253191"/>
+        <TraceEntry elementRefId="242" eventId="10" time="20257067"/>
+        <TraceEntry elementRefId="250" eventId="9" time="20257463"/>
+        <TraceEntry elementRefId="250" eventId="10" time="20266172"/>
+        <TraceEntry elementRefId="1" eventId="8" time="20266568"/>
+        <TraceEntry elementRefId="16" eventId="2" time="21994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="21995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="21995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="21995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="21996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="22252793"/>
+        <TraceEntry elementRefId="242" eventId="9" time="22253189"/>
+        <TraceEntry elementRefId="242" eventId="10" time="22257065"/>
+        <TraceEntry elementRefId="250" eventId="9" time="22257461"/>
+        <TraceEntry elementRefId="250" eventId="10" time="22629670"/>
+        <TraceEntry elementRefId="1" eventId="8" time="22630066"/>
+        <TraceEntry elementRefId="16" eventId="2" time="23994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="23995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="23995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="23995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="23996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="24252793"/>
+        <TraceEntry elementRefId="242" eventId="9" time="24253189"/>
+        <TraceEntry elementRefId="242" eventId="10" time="24257065"/>
+        <TraceEntry elementRefId="250" eventId="9" time="24257461"/>
+        <TraceEntry elementRefId="250" eventId="10" time="25186792"/>
+        <TraceEntry elementRefId="1" eventId="8" time="25187188"/>
+        <TraceEntry elementRefId="16" eventId="2" time="25994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="25995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="25995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="25995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="25996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="26252793"/>
+        <TraceEntry elementRefId="242" eventId="9" time="26253189"/>
+        <TraceEntry elementRefId="242" eventId="10" time="26257065"/>
+        <TraceEntry elementRefId="250" eventId="9" time="26257461"/>
+        <TraceEntry elementRefId="250" eventId="10" time="26266188"/>
+        <TraceEntry elementRefId="1" eventId="8" time="26266584"/>
+        <TraceEntry elementRefId="16" eventId="2" time="27994780"/>
+        <TraceEntry elementRefId="1" eventId="0" time="27995152"/>
+        <TraceEntry elementRefId="16" eventId="8" time="27995522"/>
+        <TraceEntry elementRefId="1" eventId="2" time="27995870"/>
+        <TraceEntry elementRefId="241" eventId="9" time="27996252"/>
+        <TraceEntry elementRefId="241" eventId="10" time="28252791"/>
+        <TraceEntry elementRefId="242" eventId="9" time="28253187"/>
+        <TraceEntry elementRefId="242" eventId="10" time="28257063"/>
+        <TraceEntry elementRefId="250" eventId="9" time="28257459"/>
+        <TraceEntry elementRefId="250" eventId="10" time="28629304"/>
+        <TraceEntry elementRefId="1" eventId="8" time="28629700"/>
+        <TraceEntry elementRefId="16" eventId="2" time="29994784"/>
+        <TraceEntry elementRefId="1" eventId="0" time="29995156"/>
+        <TraceEntry elementRefId="16" eventId="8" time="29995526"/>
+        <TraceEntry elementRefId="1" eventId="2" time="29995874"/>
+        <TraceEntry elementRefId="241" eventId="9" time="29996256"/>
+        <TraceEntry elementRefId="241" eventId="10" time="30252795"/>
+        <TraceEntry elementRefId="242" eventId="9" time="30253191"/>
+        <TraceEntry elementRefId="242" eventId="10" time="30257067"/>
+        <TraceEntry elementRefId="250" eventId="9" time="30257463"/>
+        <TraceEntry elementRefId="250" eventId="10" time="31148624"/>
+        <TraceEntry elementRefId="1" eventId="8" time="31149020"/>
+        <TraceEntry elementRefId="16" eventId="2" time="31994784"/>
+        <TraceEntry elementRefId="1" eventId="0" time="31995156"/>
+        <TraceEntry elementRefId="16" eventId="8" time="31995526"/>
+        <TraceEntry elementRefId="1" eventId="2" time="31995874"/>
+        <TraceEntry elementRefId="241" eventId="9" time="31996256"/>
+        <TraceEntry elementRefId="241" eventId="10" time="32252795"/>
+        <TraceEntry elementRefId="242" eventId="9" time="32253191"/>
+        <TraceEntry elementRefId="242" eventId="10" time="32257067"/>
+        <TraceEntry elementRefId="250" eventId="9" time="32257463"/>
+        <TraceEntry elementRefId="250" eventId="10" time="32266172"/>
+        <TraceEntry elementRefId="1" eventId="8" time="32266568"/>
+        <TraceEntry elementRefId="16" eventId="2" time="33994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="33995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="33995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="33995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="33996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="34252793"/>
+        <TraceEntry elementRefId="242" eventId="9" time="34253189"/>
+        <TraceEntry elementRefId="242" eventId="10" time="34257065"/>
+        <TraceEntry elementRefId="250" eventId="9" time="34257461"/>
+        <TraceEntry elementRefId="250" eventId="10" time="34628900"/>
+        <TraceEntry elementRefId="1" eventId="8" time="34629296"/>
+        <TraceEntry elementRefId="16" eventId="2" time="35994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="35995154"/>
+        <TraceEntry elementRefId="16" eventId="8" time="35995524"/>
+        <TraceEntry elementRefId="1" eventId="2" time="35995872"/>
+        <TraceEntry elementRefId="241" eventId="9" time="35996254"/>
+        <TraceEntry elementRefId="241" eventId="10" time="36252793"/>
+        <TraceEntry elementRefId="242" eventId="9" time="36253189"/>
+        <TraceEntry elementRefId="242" eventId="10" time="36257065"/>
+        <TraceEntry elementRefId="250" eventId="9" time="36257461"/>
+        <TraceEntry elementRefId="250" eventId="10" time="37171672"/>
+        <TraceEntry elementRefId="1" eventId="8" time="37172068"/>
+        <TraceEntry elementRefId="16" eventId="2" time="37994782"/>
+        <TraceEntry elementRefId="1" eventId="0" time="37995154"/>
+      </XmlTrace>
+    </Traces>
+  </SchedulingEntity>
+  <SchedulingEntity xsi:type="AutosarOsType" uuid="2" name="Core1">
+    <Clock maxAbsTime="2147483647">
+      <Tickduration denominator="1" nominator="10" unit="ns"/>
+    </Clock>
+    <EventDescription>
+      <EventIdMapping eventId="0" eventType="sched_activation"/>
+      <EventIdMapping eventId="2" eventType="sched_start"/>
+      <EventIdMapping eventId="6" eventType="sched_preempt"/>
+      <EventIdMapping eventId="8" eventType="sched_terminate"/>
+      <EventIdMapping eventId="4" eventType="sched_wait"/>
+      <EventIdMapping eventId="5" eventType="sched_release"/>
+      <EventIdMapping eventId="3" eventType="sched_stop"/>
+      <EventIdMapping eventId="9" eventType="runnable_start"/>
+      <EventIdMapping eventId="10" eventType="runnable_stop"/>
+      <EventIdMapping eventId="17" eventType="codeblock_start"/>
+      <EventIdMapping eventId="18" eventType="codeblock_stop"/>
+      <EventIdMapping eventId="22" eventType="sig_receive"/>
+      <EventIdMapping eventId="21" eventType="sig_transmit"/>
+    </EventDescription>
+    <Element xsi:type="TaskType" id="1" name="TRACEID_TASK_CP0">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="2" name="TRACEID_TASK_CP1">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="3" name="TRACEID_TASK_PP0">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="4" name="TRACEID_TASK_PP1">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="TaskType" id="5" name="TRACEID_TASK_PP2">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="InterruptType" id="17" name="TRACEID_Z0_20MS_ISR">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="InterruptType" id="16" name="TRACEID_Z6_20MS_ISR">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="InterruptType" id="18" name="TRACEID_Z0_100MS_ISR">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="250" name="TRACEID_hvacFlaps_setFlaps">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="248" name="TRACEID_hvacBlower_setPower">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="249" name="TRACEID_hvacItos_readTemp">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="246" name="TRACEID_passTempFlapCtrl_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="247" name="TRACEID_blowerCtrl_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="244" name="TRACEID_drvTempFlapCtrl_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="245" name="TRACEID_passTempAdapter_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="242" name="TRACEID_coordinator_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="243" name="TRACEID_drvTempAdapter_runCycle">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="240" name="TRACEID_hmi_sendToUI">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Element xsi:type="RunnableType" id="241" name="TRACEID_hmi_receiveFromUI">
+      <TimingValues/>
+      <TimingConstraints/>
+    </Element>
+    <Traces>
+      <XmlTrace uuid="3">
+        <TraceEntry elementRefId="17" eventId="2" time="1995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="1996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="1998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="1999362"/>
+        <TraceEntry elementRefId="243" eventId="9" time="2000486"/>
+        <TraceEntry elementRefId="243" eventId="10" time="2004724"/>
+        <TraceEntry elementRefId="245" eventId="9" time="2005848"/>
+        <TraceEntry elementRefId="245" eventId="10" time="2009880"/>
+        <TraceEntry elementRefId="240" eventId="9" time="2011042"/>
+        <TraceEntry elementRefId="240" eventId="10" time="2016198"/>
+        <TraceEntry elementRefId="3" eventId="8" time="2017314"/>
+        <TraceEntry elementRefId="17" eventId="2" time="3995446"/>
+        <TraceEntry elementRefId="3" eventId="0" time="3996746"/>
+        <TraceEntry elementRefId="17" eventId="8" time="3998038"/>
+        <TraceEntry elementRefId="3" eventId="2" time="3999382"/>
+        <TraceEntry elementRefId="243" eventId="9" time="4000506"/>
+        <TraceEntry elementRefId="243" eventId="10" time="4004548"/>
+        <TraceEntry elementRefId="245" eventId="9" time="4005674"/>
+        <TraceEntry elementRefId="245" eventId="10" time="4009540"/>
+        <TraceEntry elementRefId="240" eventId="9" time="4010706"/>
+        <TraceEntry elementRefId="240" eventId="10" time="4016544"/>
+        <TraceEntry elementRefId="3" eventId="8" time="4017830"/>
+        <TraceEntry elementRefId="17" eventId="2" time="5995442"/>
+        <TraceEntry elementRefId="3" eventId="0" time="5996742"/>
+        <TraceEntry elementRefId="17" eventId="8" time="5998034"/>
+        <TraceEntry elementRefId="3" eventId="2" time="5999416"/>
+        <TraceEntry elementRefId="243" eventId="9" time="6000556"/>
+        <TraceEntry elementRefId="243" eventId="10" time="6004576"/>
+        <TraceEntry elementRefId="245" eventId="9" time="6005714"/>
+        <TraceEntry elementRefId="245" eventId="10" time="6009562"/>
+        <TraceEntry elementRefId="240" eventId="9" time="6010692"/>
+        <TraceEntry elementRefId="240" eventId="10" time="6015856"/>
+        <TraceEntry elementRefId="3" eventId="8" time="6016988"/>
+        <TraceEntry elementRefId="17" eventId="2" time="7995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="7996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="7998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="7999414"/>
+        <TraceEntry elementRefId="243" eventId="9" time="8000554"/>
+        <TraceEntry elementRefId="243" eventId="10" time="8004578"/>
+        <TraceEntry elementRefId="245" eventId="9" time="8005720"/>
+        <TraceEntry elementRefId="245" eventId="10" time="8009573"/>
+        <TraceEntry elementRefId="240" eventId="9" time="8010706"/>
+        <TraceEntry elementRefId="240" eventId="10" time="8015858"/>
+        <TraceEntry elementRefId="3" eventId="8" time="8016984"/>
+        <TraceEntry elementRefId="17" eventId="2" time="9995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="9996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="9998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="9999414"/>
+        <TraceEntry elementRefId="243" eventId="9" time="10000554"/>
+        <TraceEntry elementRefId="243" eventId="10" time="10004578"/>
+        <TraceEntry elementRefId="245" eventId="9" time="10005720"/>
+        <TraceEntry elementRefId="245" eventId="10" time="10009573"/>
+        <TraceEntry elementRefId="240" eventId="9" time="10010706"/>
+        <TraceEntry elementRefId="240" eventId="10" time="10015858"/>
+        <TraceEntry elementRefId="3" eventId="8" time="10016984"/>
+        <TraceEntry elementRefId="17" eventId="2" time="11995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="11996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="11998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="11999414"/>
+        <TraceEntry elementRefId="243" eventId="9" time="12000554"/>
+        <TraceEntry elementRefId="243" eventId="10" time="12004578"/>
+        <TraceEntry elementRefId="245" eventId="9" time="12005720"/>
+        <TraceEntry elementRefId="245" eventId="10" time="12009573"/>
+        <TraceEntry elementRefId="240" eventId="9" time="12010706"/>
+        <TraceEntry elementRefId="240" eventId="10" time="12015858"/>
+        <TraceEntry elementRefId="3" eventId="8" time="12016984"/>
+        <TraceEntry elementRefId="17" eventId="2" time="13995446"/>
+        <TraceEntry elementRefId="3" eventId="0" time="13996746"/>
+        <TraceEntry elementRefId="17" eventId="8" time="13998038"/>
+        <TraceEntry elementRefId="3" eventId="2" time="13999398"/>
+        <TraceEntry elementRefId="243" eventId="9" time="14000522"/>
+        <TraceEntry elementRefId="243" eventId="10" time="14004568"/>
+        <TraceEntry elementRefId="245" eventId="9" time="14005714"/>
+        <TraceEntry elementRefId="245" eventId="10" time="14009590"/>
+        <TraceEntry elementRefId="240" eventId="9" time="14010736"/>
+        <TraceEntry elementRefId="240" eventId="10" time="14016004"/>
+        <TraceEntry elementRefId="3" eventId="8" time="14017138"/>
+        <TraceEntry elementRefId="17" eventId="2" time="15995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="15996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="15998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="15999396"/>
+        <TraceEntry elementRefId="243" eventId="9" time="16000520"/>
+        <TraceEntry elementRefId="243" eventId="10" time="16004566"/>
+        <TraceEntry elementRefId="245" eventId="9" time="16005712"/>
+        <TraceEntry elementRefId="245" eventId="10" time="16009588"/>
+        <TraceEntry elementRefId="240" eventId="9" time="16010734"/>
+        <TraceEntry elementRefId="240" eventId="10" time="16016002"/>
+        <TraceEntry elementRefId="3" eventId="8" time="16017136"/>
+        <TraceEntry elementRefId="17" eventId="2" time="17995448"/>
+        <TraceEntry elementRefId="3" eventId="0" time="17996748"/>
+        <TraceEntry elementRefId="17" eventId="8" time="17998040"/>
+        <TraceEntry elementRefId="3" eventId="2" time="17999400"/>
+        <TraceEntry elementRefId="243" eventId="9" time="18000524"/>
+        <TraceEntry elementRefId="243" eventId="10" time="18004570"/>
+        <TraceEntry elementRefId="245" eventId="9" time="18005716"/>
+        <TraceEntry elementRefId="245" eventId="10" time="18009592"/>
+        <TraceEntry elementRefId="240" eventId="9" time="18010738"/>
+        <TraceEntry elementRefId="240" eventId="10" time="18016006"/>
+        <TraceEntry elementRefId="3" eventId="8" time="18017140"/>
+        <TraceEntry elementRefId="17" eventId="2" time="19995446"/>
+        <TraceEntry elementRefId="3" eventId="0" time="19996746"/>
+        <TraceEntry elementRefId="17" eventId="8" time="19998038"/>
+        <TraceEntry elementRefId="3" eventId="2" time="19999398"/>
+        <TraceEntry elementRefId="243" eventId="9" time="20000522"/>
+        <TraceEntry elementRefId="243" eventId="10" time="20004568"/>
+        <TraceEntry elementRefId="245" eventId="9" time="20005714"/>
+        <TraceEntry elementRefId="245" eventId="10" time="20009590"/>
+        <TraceEntry elementRefId="240" eventId="9" time="20010736"/>
+        <TraceEntry elementRefId="240" eventId="10" time="20016004"/>
+        <TraceEntry elementRefId="3" eventId="8" time="20017138"/>
+        <TraceEntry elementRefId="17" eventId="2" time="21995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="21996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="21998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="21999396"/>
+        <TraceEntry elementRefId="243" eventId="9" time="22000520"/>
+        <TraceEntry elementRefId="243" eventId="10" time="22004566"/>
+        <TraceEntry elementRefId="245" eventId="9" time="22005712"/>
+        <TraceEntry elementRefId="245" eventId="10" time="22009588"/>
+        <TraceEntry elementRefId="240" eventId="9" time="22010734"/>
+        <TraceEntry elementRefId="240" eventId="10" time="22016002"/>
+        <TraceEntry elementRefId="3" eventId="8" time="22017136"/>
+        <TraceEntry elementRefId="17" eventId="2" time="23995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="23996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="23998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="23999396"/>
+        <TraceEntry elementRefId="243" eventId="9" time="24000520"/>
+        <TraceEntry elementRefId="243" eventId="10" time="24004566"/>
+        <TraceEntry elementRefId="245" eventId="9" time="24005712"/>
+        <TraceEntry elementRefId="245" eventId="10" time="24009588"/>
+        <TraceEntry elementRefId="240" eventId="9" time="24010734"/>
+        <TraceEntry elementRefId="240" eventId="10" time="24016002"/>
+        <TraceEntry elementRefId="3" eventId="8" time="24017136"/>
+        <TraceEntry elementRefId="17" eventId="2" time="25995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="25996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="25998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="25999396"/>
+        <TraceEntry elementRefId="243" eventId="9" time="26000520"/>
+        <TraceEntry elementRefId="243" eventId="10" time="26004566"/>
+        <TraceEntry elementRefId="245" eventId="9" time="26005712"/>
+        <TraceEntry elementRefId="245" eventId="10" time="26009588"/>
+        <TraceEntry elementRefId="240" eventId="9" time="26010734"/>
+        <TraceEntry elementRefId="240" eventId="10" time="26016002"/>
+        <TraceEntry elementRefId="3" eventId="8" time="26017136"/>
+        <TraceEntry elementRefId="17" eventId="2" time="27995442"/>
+        <TraceEntry elementRefId="3" eventId="0" time="27996742"/>
+        <TraceEntry elementRefId="17" eventId="8" time="27998034"/>
+        <TraceEntry elementRefId="3" eventId="2" time="27999394"/>
+        <TraceEntry elementRefId="243" eventId="9" time="28000518"/>
+        <TraceEntry elementRefId="243" eventId="10" time="28004564"/>
+        <TraceEntry elementRefId="245" eventId="9" time="28005710"/>
+        <TraceEntry elementRefId="245" eventId="10" time="28009586"/>
+        <TraceEntry elementRefId="240" eventId="9" time="28010732"/>
+        <TraceEntry elementRefId="240" eventId="10" time="28016000"/>
+        <TraceEntry elementRefId="3" eventId="8" time="28017134"/>
+        <TraceEntry elementRefId="17" eventId="2" time="29995446"/>
+        <TraceEntry elementRefId="3" eventId="0" time="29996746"/>
+        <TraceEntry elementRefId="17" eventId="8" time="29998038"/>
+        <TraceEntry elementRefId="3" eventId="2" time="29999398"/>
+        <TraceEntry elementRefId="243" eventId="9" time="30000522"/>
+        <TraceEntry elementRefId="243" eventId="10" time="30004568"/>
+        <TraceEntry elementRefId="245" eventId="9" time="30005714"/>
+        <TraceEntry elementRefId="245" eventId="10" time="30009590"/>
+        <TraceEntry elementRefId="240" eventId="9" time="30010736"/>
+        <TraceEntry elementRefId="240" eventId="10" time="30016004"/>
+        <TraceEntry elementRefId="3" eventId="8" time="30017138"/>
+        <TraceEntry elementRefId="17" eventId="2" time="31995446"/>
+        <TraceEntry elementRefId="3" eventId="0" time="31996746"/>
+        <TraceEntry elementRefId="17" eventId="8" time="31998038"/>
+        <TraceEntry elementRefId="3" eventId="2" time="31999398"/>
+        <TraceEntry elementRefId="243" eventId="9" time="32000522"/>
+        <TraceEntry elementRefId="243" eventId="10" time="32004568"/>
+        <TraceEntry elementRefId="245" eventId="9" time="32005714"/>
+        <TraceEntry elementRefId="245" eventId="10" time="32009590"/>
+        <TraceEntry elementRefId="240" eventId="9" time="32010736"/>
+        <TraceEntry elementRefId="240" eventId="10" time="32016004"/>
+        <TraceEntry elementRefId="3" eventId="8" time="32017138"/>
+        <TraceEntry elementRefId="17" eventId="2" time="33995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="33996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="33998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="33999396"/>
+        <TraceEntry elementRefId="243" eventId="9" time="34000520"/>
+        <TraceEntry elementRefId="243" eventId="10" time="34004566"/>
+        <TraceEntry elementRefId="245" eventId="9" time="34005712"/>
+        <TraceEntry elementRefId="245" eventId="10" time="34009588"/>
+        <TraceEntry elementRefId="240" eventId="9" time="34010734"/>
+        <TraceEntry elementRefId="240" eventId="10" time="34016002"/>
+        <TraceEntry elementRefId="3" eventId="8" time="34017136"/>
+        <TraceEntry elementRefId="17" eventId="2" time="35995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="35996744"/>
+        <TraceEntry elementRefId="17" eventId="8" time="35998036"/>
+        <TraceEntry elementRefId="3" eventId="2" time="35999396"/>
+        <TraceEntry elementRefId="243" eventId="9" time="36000520"/>
+        <TraceEntry elementRefId="243" eventId="10" time="36004566"/>
+        <TraceEntry elementRefId="245" eventId="9" time="36005712"/>
+        <TraceEntry elementRefId="245" eventId="10" time="36009588"/>
+        <TraceEntry elementRefId="240" eventId="9" time="36010734"/>
+        <TraceEntry elementRefId="240" eventId="10" time="36016002"/>
+        <TraceEntry elementRefId="3" eventId="8" time="36017136"/>
+        <TraceEntry elementRefId="17" eventId="2" time="37995444"/>
+        <TraceEntry elementRefId="3" eventId="0" time="37996748"/>
+      </XmlTrace>
+    </Traces>
+  </SchedulingEntity>
+</OT1>

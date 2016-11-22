@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tracing:TraceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tracing="http://www.itemis.de/tracing" xmi:id="_2KZEoK9wEeOZgZHRa4vSXw">
+  <traces xmi:id="_sGjRRK-pEeO_echKwOLWdw" tracePointA="_sGjRQa-pEeO_echKwOLWdw" tracePointB="_sGjRQ6-pEeO_echKwOLWdw">
+    <traceType href="conf.crema#_Pdx6AK-pEeO_echKwOLWdw"/>
+  </traces>
+  <traceResources xmi:id="_sGjRQK-pEeO_echKwOLWdw" resource="/org.itea2.amalthea.example.hvac/01_Requirements/HVAC_Requirements.reqif">
+    <tracePoints xmi:id="_sGjRQa-pEeO_echKwOLWdw" position="_2oHrAag0EeOsnrBaB07QiA" name="REQ-2" tracesAsA="_sGjRRK-pEeO_echKwOLWdw">
+      <tracePointType href="conf.crema#_EEtDYK9xEeOnNc_3lcUR2w"/>
+    </tracePoints>
+  </traceResources>
+  <traceResources xmi:id="_sGjRQq-pEeO_echKwOLWdw" resource="/org.itea2.amalthea.example.hvac/04_Behavior/ModeCoordinator.sct">
+    <tracePoints xmi:id="_sGjRQ6-pEeO_echKwOLWdw" position="_0CTtoFWmEeOqJ8kuJuTFGg" name="Manual [State]" tracesAsB="_sGjRRK-pEeO_echKwOLWdw">
+      <tracePointType href="conf.crema#_ZWiZwK-nEeOjU6bF4Ks-gg"/>
+    </tracePoints>
+  </traceResources>
+</tracing:TraceData>

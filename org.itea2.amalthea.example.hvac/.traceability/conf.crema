@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tracing:TraceConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tracing="http://www.itemis.de/tracing" xmi:id="_2KM3YK9wEeOZgZHRa4vSXw">
+  <tracePointTypes xmi:id="_EEtDYK9xEeOnNc_3lcUR2w" name="Requirement" provider="Eclipse RMF" providerConfigurationString="resource /org.itea2.amalthea.example.hvac/01_Requirements/HVAC_Requirements.reqif&#xD;&#xA;identifier ID" color="255:0:0"/>
+  <tracePointTypes xmi:id="_lp17EK9-EeOVzIu0K52bhw" name="Architecture (YCM)" provider="Eclipse Xtext" providerConfigurationString="resource *.ycm" color="255:255:0"/>
+  <tracePointTypes xmi:id="_9Hme0K-mEeOjU6bF4Ks-gg" name="Variant" provider="Eclipse SREME" providerConfigurationString="resource /org.itea2.amalthea.example.hvac/02_Variants/HAVC_Variants.pld&#xD;&#xA;" color="255:128:0"/>
+  <tracePointTypes xmi:id="_ZWiZwK-nEeOjU6bF4Ks-gg" name="Behavior" provider="YAKINDU SCT" providerConfigurationString="" color="128:255:0"/>
+  <tracePointTypes xmi:id="_igavYK-nEeOjU6bF4Ks-gg" name="Implementation" provider="Eclipse C" providerConfigurationString="resource *.c&#xD;&#xA;resource *.h" color="0:0:255"/>
+  <tracePointTypes xmi:id="_iKpzYK-qEeO_echKwOLWdw" name="Architecture (AMALTHEA)" provider="Eclipse SREME" providerConfigurationString="resource *.amxmi" color="255:255:0"/>
+  <traceTypes xmi:id="_8_xfsK9-EeOVzIu0K52bhw" traceParticipantA="_EEtDYK9xEeOnNc_3lcUR2w" traceParticipantB="_lp17EK9-EeOVzIu0K52bhw" traceClassification="_4uWt0K9-EeOVzIu0K52bhw" tracePointRoleA="_6u6QUK9-EeOVzIu0K52bhw" tracePointRoleB="_7sCm8K9-EeOVzIu0K52bhw"/>
+  <traceTypes xmi:id="_FvnLkK-pEeO_echKwOLWdw" traceParticipantA="_EEtDYK9xEeOnNc_3lcUR2w" traceParticipantB="_9Hme0K-mEeOjU6bF4Ks-gg" traceClassification="_I4wGwK-pEeO_echKwOLWdw" tracePointRoleA="_6u6QUK9-EeOVzIu0K52bhw" tracePointRoleB="_7sCm8K9-EeOVzIu0K52bhw"/>
+  <traceTypes xmi:id="_Mavm0K-pEeO_echKwOLWdw" traceParticipantA="_9Hme0K-mEeOjU6bF4Ks-gg" traceParticipantB="_lp17EK9-EeOVzIu0K52bhw" traceClassification="_I4wGwK-pEeO_echKwOLWdw" tracePointRoleA="_6u6QUK9-EeOVzIu0K52bhw" tracePointRoleB="_7sCm8K9-EeOVzIu0K52bhw"/>
+  <traceTypes xmi:id="_Pdx6AK-pEeO_echKwOLWdw" traceParticipantA="_EEtDYK9xEeOnNc_3lcUR2w" traceParticipantB="_ZWiZwK-nEeOjU6bF4Ks-gg" traceClassification="_4uWt0K9-EeOVzIu0K52bhw" tracePointRoleA="_6u6QUK9-EeOVzIu0K52bhw" tracePointRoleB="_7sCm8K9-EeOVzIu0K52bhw"/>
+  <traceClassifications xmi:id="_4uWt0K9-EeOVzIu0K52bhw" name="Refinement"/>
+  <traceClassifications xmi:id="_I4wGwK-pEeO_echKwOLWdw" name="Variant"/>
+  <tracePointRoles xmi:id="_6u6QUK9-EeOVzIu0K52bhw" name="Source"/>
+  <tracePointRoles xmi:id="_7sCm8K9-EeOVzIu0K52bhw" name="Target"/>
+</tracing:TraceConfiguration>

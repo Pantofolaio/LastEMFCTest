@@ -1,0 +1,30 @@
+GeneratorModel for yakindu::c {
+	
+	statechart BlowerCtrl {
+		feature Outlet {
+			targetProject = "org.itea2.amalthea.example.erika.hvac.ysct"
+			targetFolder = "src-gen/component"
+		}
+	}
+	
+	statechart ModeCoordinator {
+		feature Outlet {
+			targetProject = "org.itea2.amalthea.example.erika.hvac.ysct"
+			targetFolder = "src-gen/component"
+		}
+	}
+	
+	statechart TemperatureAdapter {
+		feature Outlet {
+			targetProject = "org.itea2.amalthea.example.erika.hvac.ysct"
+			targetFolder = "src-gen/component"
+		}
+	}
+	
+	statechart TemperatureFlapCtrl {
+		feature Outlet {
+			targetProject = "org.itea2.amalthea.example.erika.hvac.ysct"
+			targetFolder = "src-gen/component"
+		}
+	}
+}

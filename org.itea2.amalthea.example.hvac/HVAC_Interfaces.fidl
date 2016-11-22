@@ -1,0 +1,63 @@
+package hvac
+
+<**
+	@description: This interface defines status values for a Blower Control
+	@author: Markus Mühlbrandt
+**> 
+interface BlowerCtrl_power {
+	attribute UInt16 blwOutValue readonly noSubscriptions
+}
+
+interface BlowerCtrl_ctrl {
+	attribute UInt16 passThroughValue
+	broadcast autoMode {}
+	broadcast passThroughMode {}
+}
+
+interface Temperature {
+	attribute UInt16 temp readonly noSubscriptions
+}
+
+interface TemperatureAdapter_Signals {
+	broadcast turnOn {}
+	broadcast turnOff {}
+}
+
+interface TemperatureAdapter_Ticks extends HMI_commToggle {
+	attribute UInt8 plusTicks readonly noSubscriptions
+	attribute UInt8 minusTicks readonly noSubscriptions
+}
+
+interface TemperatureCtrl_Flap {
+	attribute UInt16 tempFlapSet readonly noSubscriptions
+}
+
+interface AirFlow_Flaps {
+	attribute UInt16 defrostLeftSet readonly noSubscriptions
+	attribute UInt16 ventLeftSet readonly noSubscriptions
+	attribute UInt16 floorLeftSet readonly noSubscriptions
+	
+	attribute UInt16 defrostRightSet readonly noSubscriptions
+	attribute UInt16 ventRightSet readonly noSubscriptions
+	attribute UInt16 floorRightSet readonly noSubscriptions
+	
+	attribute UInt16 recircSet readonly noSubscriptions
+}
+
+interface ModeCoordinator_States {
+	attribute UInt8 levelState
+	attribute Boolean recircState
+	attribute Boolean acState noSubscriptions
+}
+
+interface HMI_commToggle {
+	broadcast commToggle {}
+}
+
+interface ModeCoordinator_switches extends HMI_commToggle {
+	attribute Boolean recircSwitch
+	attribute Boolean acSwitch
+	attribute UInt8 levelSwitch
+	attribute UInt8 blwPlusTicks readonly noSubscriptions
+	attribute UInt8 blwMinusTicks readonly noSubscriptions
+}

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:p="/org.itea2.amalthea.variability/model/pld.ecore">
+  <p:ProductLine xmi:id="_edINAKqtEeOrrrccs68z0w" name="ProductLine">
+    <featureModels xmi:type="p:FeatureModel" xmi:id="_edINAaqtEeOrrrccs68z0w" name="FeatureModel">
+      <rootFeature xmi:type="p:Feature" xmi:id="_edINAqqtEeOrrrccs68z0w" name="HVAC" filePath="" description="The root element of the current Feature Model" configStatus="Grayed">
+        <subFeatureRelations xmi:type="p:Mandatory" xmi:id="_ALSJsKquEeOrrrccs68z0w">
+          <feature xmi:type="p:Feature" xmi:id="_ALeW8KquEeOrrrccs68z0w" name="HVAC_manager" configStatus="Grayed"/>
+        </subFeatureRelations>
+        <subFeatureRelations xmi:type="p:Mandatory" xmi:id="_CvBRwKquEeOrrrccs68z0w">
+          <feature xmi:type="p:Feature" xmi:id="_CvBRwaquEeOrrrccs68z0w" name="ITOS" configStatus="Grayed"/>
+        </subFeatureRelations>
+        <subFeatureRelations xmi:type="p:Mandatory" xmi:id="_E-EjQKquEeOrrrccs68z0w">
+          <feature xmi:type="p:Feature" xmi:id="_E-EjQaquEeOrrrccs68z0w" name="Blower" configStatus="Grayed"/>
+        </subFeatureRelations>
+        <subFeatureRelations xmi:type="p:Mandatory" xmi:id="_J82KYKquEeOrrrccs68z0w">
+          <feature xmi:type="p:Feature" xmi:id="_J82KYaquEeOrrrccs68z0w" name="Airflow_control" configStatus="Grayed">
+            <subFeatureRelations xmi:type="p:Alternative" xmi:id="_S9baEKquEeOrrrccs68z0w">
+              <features xmi:type="p:Feature" xmi:id="_S9baEaquEeOrrrccs68z0w" name="internal" configStatus="Selected"/>
+              <features xmi:type="p:Feature" xmi:id="_S9baEqquEeOrrrccs68z0w" name="external" configStatus="Disabled"/>
+            </subFeatureRelations>
+          </feature>
+        </subFeatureRelations>
+        <subFeatureRelations xmi:type="p:Mandatory" xmi:id="_MhmmIKquEeOrrrccs68z0w">
+          <feature xmi:type="p:Feature" xmi:id="_MhmmIaquEeOrrrccs68z0w" name="HMI" configStatus="Grayed">
+            <subFeatureRelations xmi:type="p:Alternative" xmi:id="_YWZp4KquEeOrrrccs68z0w">
+              <features xmi:type="p:Feature" xmi:id="_YWZp4aquEeOrrrccs68z0w" name="external" configStatus="Disabled" requiredProperties="_1lzb8KqxEeO60YRHC7rLsQ"/>
+              <features xmi:type="p:Feature" xmi:id="_YWZp4qquEeOrrrccs68z0w" name="Display" configStatus="Selected" requiredProperties="_5-YlwKqxEeO60YRHC7rLsQ"/>
+            </subFeatureRelations>
+          </feature>
+        </subFeatureRelations>
+      </rootFeature>
+    </featureModels>
+    <propertyList xmi:type="p:PropertyList" xmi:id="_edINA6qtEeOrrrccs68z0w">
+      <generalPlatforms xmi:type="p:GeneralPlatform" xmi:id="_uMZlcKqxEeO60YRHC7rLsQ">
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_vOTuYKqxEeO60YRHC7rLsQ" entityIdentifier="LIN" elementType="Bus">
+          <properties xmi:type="p:GeneralProperty" xmi:id="_xIlpwKqxEeO60YRHC7rLsQ" name="type" value="LIN"/>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_z8riAKqxEeO60YRHC7rLsQ" entityIdentifier="CAN" elementType="Bus">
+          <properties xmi:type="p:GeneralProperty" xmi:id="_1lzb8KqxEeO60YRHC7rLsQ" name="type" value="CAN"/>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_4XT6QKqxEeO60YRHC7rLsQ" entityIdentifier="SPI" elementType="Bus">
+          <properties xmi:type="p:GeneralProperty" xmi:id="_5-YlwKqxEeO60YRHC7rLsQ" name="type" value="SPI"/>
+        </hardwareElements>
+      </generalPlatforms>
+    </propertyList>
+    <concretePlatforms xmi:type="p:ConcretePlatform" xmi:id="_ms7_sKqwEeO60YRHC7rLsQ" name="MPC5668G Demo Board" reference="E:\Sonstiges\ITEA\Tooling\AMAL_13.03\MPC5668G.amxmi" identifier="MPC5668G Demo Board" configStatus="Selected" partOfProduct="true">
+      <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_saqwEeO60YRHC7rLsQ" entityIdentifier="MPC5668G" elementType="Microcontroller">
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_sqqwEeO60YRHC7rLsQ" entityIdentifier="AIPS_PeripheralBridge_A" elementType="Component">
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_s6qwEeO60YRHC7rLsQ" entityIdentifier="AIPS_A" elementType="Bridge">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_tKqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_taqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_tqqwEeO60YRHC7rLsQ" entityIdentifier="PS_AIPS_A" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_t6qwEeO60YRHC7rLsQ" name="Clock ratio" value="0.5"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_uKqwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_uaqwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_uqqwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_u6qwEeO60YRHC7rLsQ" entityIdentifier="CONN_AIPS_A" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_vKqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_vaqwEeO60YRHC7rLsQ" name="Base adress" value="3221225472"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_vqqwEeO60YRHC7rLsQ" name="Adress range" value="536870912"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_v6qwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_wKqwEeO60YRHC7rLsQ" name="Write cycles" value="2"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_waqwEeO60YRHC7rLsQ" name="Read cycles" value="2"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_wqqwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_w6qwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_xKqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_xaqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_xqqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_x6qwEeO60YRHC7rLsQ" entityIdentifier="AIPS_PeripheralBridge_B" elementType="Component">
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_yKqwEeO60YRHC7rLsQ" entityIdentifier="AIPS_B" elementType="Bridge">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_yaqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_yqqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_y6qwEeO60YRHC7rLsQ" entityIdentifier="PS_AIPS_B" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_zKqwEeO60YRHC7rLsQ" name="Clock ratio" value="0.5"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_zaqwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_zqqwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_z6qwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_0KqwEeO60YRHC7rLsQ" entityIdentifier="CONN_AIPS_B" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_0aqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_0qqwEeO60YRHC7rLsQ" name="Base adress" value="3758096384"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_06qwEeO60YRHC7rLsQ" name="Adress range" value="536870912"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_1KqwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_1aqwEeO60YRHC7rLsQ" name="Write cycles" value="2"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_1qqwEeO60YRHC7rLsQ" name="Read cycles" value="2"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_16qwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_2KqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_2aqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_2qqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_26qwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_3KqwEeO60YRHC7rLsQ" entityIdentifier="FlexRay" elementType="Component">
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_3aqwEeO60YRHC7rLsQ" entityIdentifier="CONN_FlexRayBusMasterInterface" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_3qqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_36qwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_4KqwEeO60YRHC7rLsQ" name="Write cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_4aqwEeO60YRHC7rLsQ" name="Read cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_4qqwEeO60YRHC7rLsQ" name="Schedule cycles" value="2"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_46qwEeO60YRHC7rLsQ" name="Is master" value="true"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_5KqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_5aqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_5qqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_56qwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_6KqwEeO60YRHC7rLsQ" entityIdentifier="CONN_FlexRayControlHostInterface" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_6aqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_6qqwEeO60YRHC7rLsQ" name="Base adress" value="3288186880"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_66qwEeO60YRHC7rLsQ" name="Adress range" value="16384"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_7KqwEeO60YRHC7rLsQ" name="Direction" value="R"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_7aqwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_7qqwEeO60YRHC7rLsQ" entityIdentifier="AIPS_A" elementType="Bridge">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_76qwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_8KqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_8aqwEeO60YRHC7rLsQ" entityIdentifier="Ethernet" elementType="Component">
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_8qqwEeO60YRHC7rLsQ" entityIdentifier="CONN_Ethernet" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_86qwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_9KqwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_9aqwEeO60YRHC7rLsQ" name="Write cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_9qqwEeO60YRHC7rLsQ" name="Read cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_96qwEeO60YRHC7rLsQ" name="Schedule cycles" value="2"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_-KqwEeO60YRHC7rLsQ" name="Is master" value="true"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7_-aqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_-qqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7_-6qwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7__KqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms7__aqwEeO60YRHC7rLsQ" entityIdentifier="CONN_FEC" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7__qqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms7__6qwEeO60YRHC7rLsQ" name="Base adress" value="4294230016"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AAKqwEeO60YRHC7rLsQ" name="Adress range" value="16384"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AAaqwEeO60YRHC7rLsQ" name="Direction" value="R"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AAqqwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AA6qwEeO60YRHC7rLsQ" entityIdentifier="AIPS_B" elementType="Bridge">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ABKqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ABaqwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8ABqqwEeO60YRHC7rLsQ" entityIdentifier="e200z6" elementType="Core">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AB6qwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ACKqwEeO60YRHC7rLsQ" name="Ticks per cycle" value="1"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ACaqwEeO60YRHC7rLsQ"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ACqqwEeO60YRHC7rLsQ" name="StrValue instructionSet" value="PowerArchitectureInstructionSet"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AC6qwEeO60YRHC7rLsQ" name="StrValue instructionSet" value="VLE"/>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8ADKqwEeO60YRHC7rLsQ" entityIdentifier="CACHE_e200z6" elementType="Memory">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ADaqwEeO60YRHC7rLsQ" name="Memory type" value="CACHE"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ADqqwEeO60YRHC7rLsQ" name="Size" value="32768"/>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AD6qwEeO60YRHC7rLsQ" entityIdentifier="PS_e200z6" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AEKqwEeO60YRHC7rLsQ" name="Clock ratio" value="1.0"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AEaqwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AEqqwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AE6qwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AFKqwEeO60YRHC7rLsQ" entityIdentifier="CONN_e200z6" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AFaqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AFqqwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AF6qwEeO60YRHC7rLsQ" name="Write cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AGKqwEeO60YRHC7rLsQ" name="Read cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AGaqwEeO60YRHC7rLsQ" name="Is master" value="true"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AGqqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AG6qwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AHKqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AHaqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AHqqwEeO60YRHC7rLsQ" entityIdentifier="e200z0" elementType="Core">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AH6qwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AIKqwEeO60YRHC7rLsQ" name="Ticks per cycle" value="1"/>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AIaqwEeO60YRHC7rLsQ" entityIdentifier="PS_e200z0" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AIqqwEeO60YRHC7rLsQ" name="Clock ratio" value="0.5"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AI6qwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AJKqwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AJaqwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AJqqwEeO60YRHC7rLsQ" entityIdentifier="CONN_e200z0" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AJ6qwEeO60YRHC7rLsQ" name="Bit width" value="32"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AKKqwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AKaqwEeO60YRHC7rLsQ" name="Write cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AKqqwEeO60YRHC7rLsQ" name="Read cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AK6qwEeO60YRHC7rLsQ" name="Is master" value="true"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8ALKqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ALaqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ALqqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AL6qwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AMKqwEeO60YRHC7rLsQ" entityIdentifier="SRAM_512KB" elementType="Memory">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AMaqwEeO60YRHC7rLsQ" name="Memory type" value="RAM"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AMqqwEeO60YRHC7rLsQ" name="Size" value="524288"/>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AM6qwEeO60YRHC7rLsQ" entityIdentifier="PS_SRAM512KB" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ANKqwEeO60YRHC7rLsQ" name="Clock ratio" value="1.0"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8ANaqwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ANqqwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AN6qwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AOKqwEeO60YRHC7rLsQ" entityIdentifier="CONN_SRAM512KB" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AOaqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AOqqwEeO60YRHC7rLsQ" name="Base adress" value="1073741824"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AO6qwEeO60YRHC7rLsQ" name="Adress range" value="524288"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8APKqwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8APaqwEeO60YRHC7rLsQ" name="Write cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8APqqwEeO60YRHC7rLsQ" name="Read cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AP6qwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AQKqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AQaqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AQqqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AQ6qwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8ARKqwEeO60YRHC7rLsQ" entityIdentifier="SRAM_80KB" elementType="Memory">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ARaqwEeO60YRHC7rLsQ" name="Memory type" value="RAM"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ARqqwEeO60YRHC7rLsQ" name="Size" value="81920"/>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AR6qwEeO60YRHC7rLsQ" entityIdentifier="PS_SRAM80KB" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ASKqwEeO60YRHC7rLsQ" name="Clock ratio" value="1.0"/>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8ASaqwEeO60YRHC7rLsQ" entityIdentifier="CONN_SRAM80KB" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ASqqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AS6qwEeO60YRHC7rLsQ" name="Base adress" value="1074266112"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ATKqwEeO60YRHC7rLsQ" name="Adress range" value="81920"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ATaqwEeO60YRHC7rLsQ" name="Direction" value="RW"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8ATqqwEeO60YRHC7rLsQ" name="Write cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AT6qwEeO60YRHC7rLsQ" name="Read cycles" value="1"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AUKqwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AUaqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AUqqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AU6qwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AVKqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AVaqwEeO60YRHC7rLsQ" entityIdentifier="FLASH2MB" elementType="Memory">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AVqqwEeO60YRHC7rLsQ" name="Memory type" value="FLASH_INT"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AV6qwEeO60YRHC7rLsQ" name="Size" value="2097152"/>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AWKqwEeO60YRHC7rLsQ" entityIdentifier="PS_FLASH2MB" elementType="Precaler">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AWaqwEeO60YRHC7rLsQ" name="Clock ratio" value="1.0"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AWqqwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AW6qwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AXKqwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AXaqwEeO60YRHC7rLsQ" entityIdentifier="CONN_z6_FLASH2MB" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AXqqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AX6qwEeO60YRHC7rLsQ" name="Adress range" value="536870911"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AYKqwEeO60YRHC7rLsQ" name="Direction" value="R"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AYaqwEeO60YRHC7rLsQ" name="Read cycles" value="3"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AYqqwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AY6qwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AZKqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AZaqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AZqqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+          <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AZ6qwEeO60YRHC7rLsQ" entityIdentifier="CONN_others_FLASH2MB" elementType="ComplexPort">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AaKqwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AaaqwEeO60YRHC7rLsQ" name="Adress range" value="536870911"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AaqqwEeO60YRHC7rLsQ" name="Direction" value="R"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8Aa6qwEeO60YRHC7rLsQ" name="Read cycles" value="3"/>
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AbKqwEeO60YRHC7rLsQ" name="Is master" value="false"/>
+            <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AbaqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AbqqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8Ab6qwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+              <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AcKqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+            </hardwareElements>
+          </hardwareElements>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AcaqwEeO60YRHC7rLsQ" entityIdentifier="Amba Crossbar Switch" elementType="Crossbarswitch">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AcqqwEeO60YRHC7rLsQ" name="Schedule Policy" value="RROBIN"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8Ac6qwEeO60YRHC7rLsQ" name="Bit width" value="64"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AdKqwEeO60YRHC7rLsQ" name="con Connection" value="6"/>
+        </hardwareElements>
+        <hardwareElements xmi:type="p:HardwareElement" xmi:id="_ms8AdaqwEeO60YRHC7rLsQ" entityIdentifier="Q116MHZ" elementType="Quartz">
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8AdqqwEeO60YRHC7rLsQ" name="Frequency" value="116000000"/>
+          <properties xmi:type="p:ConcreteProperty" xmi:id="_ms8Ad6qwEeO60YRHC7rLsQ" name="Type" value="STATIC"/>
+        </hardwareElements>
+      </hardwareElements>
+      <hardwareElements xmi:type="p:HardwareElement" xmi:id="_rijDwKqwEeO60YRHC7rLsQ" entityIdentifier="LIN" elementType="Bus">
+        <properties xmi:type="p:ConcreteProperty" xmi:id="_8Y7yEKqwEeO60YRHC7rLsQ" name="type LIN"/>
+      </hardwareElements>
+      <hardwareElements xmi:type="p:HardwareElement" xmi:id="_vvQUwKqwEeO60YRHC7rLsQ" entityIdentifier="CAN" elementType="Bus">
+        <properties xmi:type="p:ConcreteProperty" xmi:id="_p-IOMKqxEeO60YRHC7rLsQ" name="type" value="CAN"/>
+      </hardwareElements>
+      <variationpoints xmi:type="p:Variationpoint" xmi:id="_oWDSkKqwEeO60YRHC7rLsQ" configStatus="Selected">
+        <variationElements xmi:type="p:VariationElement" xmi:id="_zswsIKqwEeO60YRHC7rLsQ" affectedPlatform="_ms7_sKqwEeO60YRHC7rLsQ">
+          <elementToAdd xmi:type="p:HardwareElement" xmi:id="_2JragKqwEeO60YRHC7rLsQ" entityIdentifier="SPI" elementType="Bus">
+            <properties xmi:type="p:ConcreteProperty" xmi:id="_5aENMKqwEeO60YRHC7rLsQ" name="type" value="SPI"/>
+          </elementToAdd>
+        </variationElements>
+      </variationpoints>
+    </concretePlatforms>
+  </p:ProductLine>
+  <notation:Diagram xmi:id="_eev9oKqtEeOrrrccs68z0w" type="Pld" element="_edINAKqtEeOrrrccs68z0w" name="HAVC_Variants.pld" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_e_zcQKqtEeOrrrccs68z0w" type="2006" element="_edINAaqtEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_e_5i4qqtEeOrrrccs68z0w" type="5011"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_e_5i46qtEeOrrrccs68z0w" type="7006">
+        <children xmi:type="notation:Node" xmi:id="_fB_0oKqtEeOrrrccs68z0w" type="3005" element="_edINAqqtEeOrrrccs68z0w">
+          <children xmi:type="notation:DecorationNode" xmi:id="_fB_0pKqtEeOrrrccs68z0w" type="5010"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_fB_0oaqtEeOrrrccs68z0w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fB_0oqqtEeOrrrccs68z0w" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fB_0o6qtEeOrrrccs68z0w"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_e_5i5KqtEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_e_5i5aqtEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_e_zcQaqtEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_e_zcQqqtEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_e_5i4KqtEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e_5i4aqtEeOrrrccs68z0w" x="260" y="10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_AOt4MKquEeOrrrccs68z0w" type="2003" element="_ALSJsKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_AOt4NaquEeOrrrccs68z0w" type="5005"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_AOt4NqquEeOrrrccs68z0w" type="7003">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_AOt4N6quEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_AOt4OKquEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_AOt4MaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_AOt4MqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_AOt4M6quEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AOt4NKquEeOrrrccs68z0w" x="26" y="141"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_CvBRwqquEeOrrrccs68z0w" type="2003" element="_CvBRwKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_CvBRx6quEeOrrrccs68z0w" type="5005"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_CvBRyKquEeOrrrccs68z0w" type="7003">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_CvBRyaquEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_CvBRyqquEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_CvBRw6quEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_CvBRxKquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_CvBRxaquEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvBRxqquEeOrrrccs68z0w" x="155" y="140"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_E-EjQqquEeOrrrccs68z0w" type="2003" element="_E-EjQKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_E-EjR6quEeOrrrccs68z0w" type="5005"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_E-EjSKquEeOrrrccs68z0w" type="7003">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_E-EjSaquEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_E-EjSqquEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_E-EjQ6quEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_E-EjRKquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_E-EjRaquEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-EjRqquEeOrrrccs68z0w" x="235" y="140"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_J82KYqquEeOrrrccs68z0w" type="2003" element="_J82KYKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_J82KZ6quEeOrrrccs68z0w" type="5005"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_J82KaKquEeOrrrccs68z0w" type="7003">
+        <children xmi:type="notation:Node" xmi:id="_J88RAKquEeOrrrccs68z0w" type="3002" element="_J82KYaquEeOrrrccs68z0w">
+          <children xmi:type="notation:DecorationNode" xmi:id="_J88RBKquEeOrrrccs68z0w" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_J88RAaquEeOrrrccs68z0w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_J88RAqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J88RA6quEeOrrrccs68z0w"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_J82KaaquEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_J82KaqquEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_J82KY6quEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_J82KZKquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_J82KZaquEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J82KZqquEeOrrrccs68z0w" x="320" y="140"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_MhmmIqquEeOrrrccs68z0w" type="2003" element="_MhmmIKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_MhmmJ6quEeOrrrccs68z0w" type="5005"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_MhmmKKquEeOrrrccs68z0w" type="7003">
+        <children xmi:type="notation:Node" xmi:id="_MhsswKquEeOrrrccs68z0w" type="3002" element="_MhmmIaquEeOrrrccs68z0w">
+          <children xmi:type="notation:DecorationNode" xmi:id="_MhssxKquEeOrrrccs68z0w" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_MhsswaquEeOrrrccs68z0w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_MhsswqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mhssw6quEeOrrrccs68z0w"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_MhmmKaquEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_MhmmKqquEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_MhmmI6quEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_MhmmJKquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_MhmmJaquEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MhmmJqquEeOrrrccs68z0w" x="435" y="140"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_S9baE6quEeOrrrccs68z0w" type="2001" element="_S9baEKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_S9baGKquEeOrrrccs68z0w" type="5002"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_S9baGaquEeOrrrccs68z0w" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_S9baGqquEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_S9baG6quEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_S9baFKquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_S9baFaquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_S9baFqquEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S9baF6quEeOrrrccs68z0w" x="280" y="285"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_YWZp46quEeOrrrccs68z0w" type="2001" element="_YWZp4KquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_YWZp6KquEeOrrrccs68z0w" type="5002"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_YWZp6aquEeOrrrccs68z0w" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_YWZp6qquEeOrrrccs68z0w"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_YWZp66quEeOrrrccs68z0w"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_YWZp5KquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_YWZp5aquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_YWZp5qquEeOrrrccs68z0w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YWZp56quEeOrrrccs68z0w" x="455" y="285"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_eev9oaqtEeOrrrccs68z0w"/>
+    <edges xmi:type="notation:Edge" xmi:id="_HUlHoKquEeOrrrccs68z0w" type="4001" source="_fB_0oKqtEeOrrrccs68z0w" target="_AOt4MKquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_HUlHpKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_HUlHpaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HUlHpqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_HUlHoaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_HUlHoqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HUlHo6quEeOrrrccs68z0w" points="[-21, 9, 197, -111]$[-218, 89, 0, -31]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_H9HHQKquEeOrrrccs68z0w" type="4001" source="_fB_0oKqtEeOrrrccs68z0w" target="_CvBRwqquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_H9HHRKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_H9HHRaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_H9HHRqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_H9HHQaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_H9HHQqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H9HHQ6quEeOrrrccs68z0w" points="[-13, 15, 69, -104]$[-82, 88, 0, -31]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_IfWRoKquEeOrrrccs68z0w" type="4001" source="_fB_0oKqtEeOrrrccs68z0w" target="_E-EjQqquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_IfWRpKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_IfWRpaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IfWRpqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_IfWRoaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_IfWRoqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IfWRo6quEeOrrrccs68z0w" points="[1, 15, 8, -99]$[-7, 83, 0, -31]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_WmTlQKquEeOrrrccs68z0w" type="4001" source="_J88RAKquEeOrrrccs68z0w" target="_S9baE6quEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_WmTlRKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_WmTlRaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WmTlRqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_WmTlQaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_WmTlQqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WmTlQ6quEeOrrrccs68z0w" points="[-4, 15, 28, -120]$[-32, 104, 0, -31]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_XMdmUKquEeOrrrccs68z0w" type="4001" source="_fB_0oKqtEeOrrrccs68z0w" target="_J82KYqquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_XMdmVKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_XMdmVaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_XMdmVqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_XMdmUaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_XMdmUqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XMdmU6quEeOrrrccs68z0w" points="[10, 15, -64, -104]$[74, 88, 0, -31]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_XzFhcKquEeOrrrccs68z0w" type="4001" source="_fB_0oKqtEeOrrrccs68z0w" target="_MhmmIqquEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_XzFhdKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_XzFhdaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_XzFhdqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_XzFhcaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_XzFhcqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XzFhc6quEeOrrrccs68z0w" points="[21, 12, -147, -107]$[168, 88, 0, -31]"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_Y6EXoKquEeOrrrccs68z0w" type="4001" source="_MhsswKquEeOrrrccs68z0w" target="_YWZp46quEeOrrrccs68z0w">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Y6EXpKquEeOrrrccs68z0w" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Y6EXpaquEeOrrrccs68z0w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Y6EXpqquEeOrrrccs68z0w" y="40"/>
+      </children>
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_Y6EXoaquEeOrrrccs68z0w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Y6EXoqquEeOrrrccs68z0w" fontName="Segoe UI"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y6EXo6quEeOrrrccs68z0w" points="[3, 15, -50, -130]$[53, 114, 0, -31]"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

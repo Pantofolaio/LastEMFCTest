@@ -4,4 +4,20 @@
     <item href="artifactWrappers.xmi#//@artifacts.0"/>
     <item href="artifactWrappers.xmi#//@artifacts.1"/>
   </traces>
+  <traces name=" [L/LastEMFCtestProject/WordFormSample.doc, org.eclipse.rmf.reqif10.impl.SpecObjectImpl@1c2b4742 (desc: REQ-1, identifier: _BRG4Zag0EeOsnrBaB07QiA, lastChange: java.util.GregorianCalendar[time=?,areFieldsSet=false,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id=&quot;GMT+01:00&quot;,offset=3600000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2014,MONTH=2,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=19,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=0,HOUR=0,HOUR_OF_DAY=15,MINUTE=36,SECOND=38,MILLISECOND=721,ZONE_OFFSET=3600000,DST_OFFSET=0], longName: REQ-1)]">
+    <item href="artifactWrappers.xmi#//@artifacts.2"/>
+    <item href="../org.itea2.amalthea.example.hvac/01_Requirements/HVAC_Requirements.reqif#_BRG4Zag0EeOsnrBaB07QiA"/>
+  </traces>
+  <traces name=" [L/LastEMFCtestProject/design/WordFormSample.doc, org.eclipse.uml2.uml.internal.impl.ModelImpl@12436267 (name: RootElement, visibility: &lt;unset>) (URI: null) (viewpoint: &lt;unset>)]">
+    <item href="artifactWrappers.xmi#//@artifacts.3"/>
+    <item href="../LastEMFCtestProject/design/model.uml#_DRya0Io_EeaIMOmeverxKA"/>
+  </traces>
+  <traces name=" [L/org.itea2.amalthea.example.erika.hvac.ysct/src-gen/component/ModeCoordinator.c, org.eclipse.uml2.uml.internal.impl.ClassImpl@4e01c6c5 (name: AAA, visibility: &lt;unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)]">
+    <item href="artifactWrappers.xmi#//@artifacts.4"/>
+    <item href="../LastEMFCtestProject/design/model.uml#_7uY_kKzUEea8q5_VYn-f9w"/>
+  </traces>
+  <traces name=" [L/__WorkspaceTraceModels/traceModel.xmi, org.eclipse.uml2.uml.internal.impl.ClassImpl@7690e3db (name: BBB, visibility: &lt;unset>) (isLeaf: false, isAbstract: false, isFinalSpecialization: false) (isActive: false)]">
+    <item href="artifactWrappers.xmi#//@artifacts.5"/>
+    <item href="../LastEMFCtestProject/design/model.uml#_9lV6IKzUEea8q5_VYn-f9w"/>
+  </traces>
 </GenericTraceMetaModel:GenericTraceModel>

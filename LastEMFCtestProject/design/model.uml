@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_DRya0Io_EeaIMOmeverxKA" name="RootElement">
-  <packagedElement xmi:type="uml:Class" xmi:id="_7uY_kKzUEea8q5_VYn-f9w" name="AAA"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_9lV6IKzUEea8q5_VYn-f9w" name="BBB"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7uY_kKzUEea8q5_VYn-f9w" name="1"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9lV6IKzUEea8q5_VYn-f9w" name="2"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_GNcT4LCwEeatiqEKVhwaXQ" name="3"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_IZk0QLCwEeatiqEKVhwaXQ" name="4"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_N-lU8LCwEeatiqEKVhwaXQ" name="5"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_Tyf0ULCwEeatiqEKVhwaXQ" name="6"/>
 </uml:Model>
